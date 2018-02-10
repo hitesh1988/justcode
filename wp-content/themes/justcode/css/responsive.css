@@ -1,0 +1,76 @@
+@media screen and (min-width:800px) {
+   
+
+  .checkout-wrap {margin:20px auto 80px;}
+  ul.checkout-bar {height: 2px;margin: 0 auto;padding: 0;position: absolute;width: 100%;}
+  ul.checkout-bar:before {content: "";background-color: #41b372;width: calc(100% - 240px);position: absolute;height: 2px;left: 102px;}
+    
+  ul.checkout-bar li {display: inline-block;margin: 22px 0 0;padding: 0;text-align: center;width: 19%;}
+  ul.checkout-bar li:before {height: 30px;left: 50%;line-height: 30px;position: absolute;top: -38px;width: 30px;z-index: 99;-webkit-transform: translateX(-50%);transform: translateX(-50%);}
+  ul.checkout-bar li.visited {background: none;}
+   
+}
+
+
+@media screen and (max-width:1400px){
+    
+    .arpatech-logo images {max-width: 120px;}
+    .intro-text h1 { font-size:42px; }
+}
+
+@media screen and (max-width:1190px) {
+    
+    .estimation-details-section .details .promocode-block .input-box .input-text { max-width: calc(100% - 110px); }
+    .estimation-details-section .details .promocode-block .input-box .btn { max-width:100px; }
+    
+}
+
+
+@media screen and (max-width:990px) { 
+    
+    .estimation-details-section h1 { font-size:26px; }
+    .estimation-details-section .details label { font-size:18px; }
+    .estimation-details-section .details .price { margin-top:5px; }
+    .estimation-details-section .details .promocode-block label { width:100%; }
+    .estimation-details-section .details .promocode-block .input-box { width:100%; }
+    .estimation-details-section .details .promocode-block .input-box .input-text { max-width:100%; width:calc(100% - 110px); }
+    .estimation-details-section .details .promocode-block .input-box .btn  { max-width:100%; width:100px; }
+    ul.checkout-bar:before { width: calc(100% - 160px) !important; left:80px !important; }
+    
+    .specialities {padding-top: 0px;padding-bottom: 80px;}
+    
+    .header .intro-text {padding-top: 300px;padding-bottom: 0;padding-top: 0px!important;top: 50%;position: absolute;-webkit-transform: translateY(-50%);transform: translateY(-50%); padding-left: 15px;padding-right: 15px;}
+    .founder-box { margin-bottom:10px; }
+    
+    .services-short-section img { left:50%; -webkit-transform:translateX(-50%); transform:translateX(-50%); }
+    .magento-services-main h2 { font-size:50px; }
+    .banner-text-web-2 h3 { font-size:55px; margin-top:50px;  }
+    .services-short-section h2 { font-size:23px; }
+    ul.right-side li h2,ul.left-side li h2 { font-size:20px; color:#fff; }
+    .meetup-bar { background:#091d36; }
+    
+    
+    .meetup-bar { background-size:100%!important; background-position:0 0!important; }
+   /* .header { display:inline-block; width:100%; }*/
+    
+    
+}
+
+@media screen and (max-width:767px) {
+    
+    .estimation-grid-section .title h1 { font-size:36px; }
+    .estimation-grid-section .title h3 { font-size:24px; line-height:36px; }
+    .estimation-details-section .image images {width: 100%;} 
+    .estimation-details-section .details-block > div {height: auto !important;padding-left: 15px;padding-right: 15px;}
+    .estimation-details-section .image { padding-top:15px; padding-bottom:15px; }
+    .checkout-wrap ul {padding-left: 0;}
+    ul.checkout-bar li { padding:14px 10px 14px 70px; } 
+    
+    .banner-text-web-2 h1 { font-size:30px; }
+    .banner-text-web-2 h3 { font-size:35px; margin-top:40px; }    
+    .magento-services-main h2 { font-size:35px; }
+    .services-short-section h2 { font-size:23px; }
+    
+    ul.left-side, ul.right-side { width:100%; }    
+}
+ 
