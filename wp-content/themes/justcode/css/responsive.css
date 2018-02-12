@@ -3,10 +3,12 @@
 
   .checkout-wrap {margin:20px auto 80px;}
   ul.checkout-bar {height: 2px;margin: 0 auto;padding: 0;position: absolute;width: 100%;}
-  ul.checkout-bar:before {content: "";background-color: #41b372;width: calc(100% - 240px);position: absolute;height: 2px;left: 102px;}
+  ul.checkout-bar:before {content: "";background-color:#dedede;width: calc(100% - 240px);position: absolute;height: 2px;left: 102px;}
     
   ul.checkout-bar li {display: inline-block;margin: 22px 0 0;padding: 0;text-align: center;width: 19%;}
   ul.checkout-bar li:before {height: 30px;left: 50%;line-height: 30px;position: absolute;top: -38px;width: 30px;z-index: 99;-webkit-transform: translateX(-50%);transform: translateX(-50%);}
+  ul.checkout-bar li.active:after {content: "";background-color:#41b372; position: absolute;height: 2px;left:0; top:-22px; width:100%; }
+  ul.checkout-bar li.active:last-child:after { width:50%; }
   ul.checkout-bar li.visited {background: none;}
    
 }

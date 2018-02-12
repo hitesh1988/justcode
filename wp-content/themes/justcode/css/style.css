@@ -1456,7 +1456,7 @@ p.oops-short { font-size: 18px }
 
 .checkout-wrap {color: #444;display:inline-block;position: relative;width:100%; }
 ul.checkout-bar li {color: #150f2a;display: block;font-size: 16px;font-weight: 600;padding: 14px 20px 14px 80px;position: relative;}
-ul.checkout-bar li:before {background:#41b372 url('../images/check-sign.png') no-repeat center center;border: 2px solid #FFF;border-radius: 50%;color: #fff;font-size: 16px;font-weight: 700;left: 20px;line-height: 37px;height: 35px;position: absolute;text-align: center;top: 4px;width: 35px;z-index: 999;content:"";}
+ul.checkout-bar li:before {background:#dedede; border: 2px solid #FFF;border-radius: 50%;color: #fff;font-size: 16px;font-weight: 700;left: 20px;line-height: 37px;height: 35px;position: absolute;text-align: center;top: 4px;width: 35px;z-index: 999;content:"";}
 ul.checkout-bar li.active {color:#150f2a;font-weight: bold;}
 ul.checkout-bar li.active:before {background:url('../images/active-progress.png') no-repeat center center; width: 40px;height: 40px; z-index: 99999;} 
 ul.checkout-bar a {color: #150f2a;font-size: 16px;font-weight: 600;text-decoration: none;}

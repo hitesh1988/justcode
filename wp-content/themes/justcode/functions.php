@@ -295,8 +295,6 @@ function justcode_scripts() {
 	wp_enqueue_script( 'justcode-jquery.bxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', array(), '20151215', true );
 	wp_enqueue_script( 'justcode-owl.carousel', get_template_directory_uri() . '/js/owl.carousel.js', array(), '20151215', true );
 	wp_enqueue_script( 'justcode-scrolloverflow', get_template_directory_uri() . '/js/scrolloverflow.js', array(), '20151215', true );
-	
-	
 	wp_enqueue_script( 'justcode-fullPage.min', get_template_directory_uri() . '/js/jquery.fullPage.min.js', array(), '20151215', true );
 	
 }
@@ -332,3 +330,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_image_size( 'project-thumb', 632, 120, true );
