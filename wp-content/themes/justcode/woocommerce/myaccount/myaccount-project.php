@@ -16,7 +16,12 @@ if(!$validate) _jcredirect404() ;
 $progress = get_field('progress',$pID);
 $post_thumbnail_id = get_post_thumbnail_id( $pID );
 $attachment = wp_get_attachment_image_src( $post_thumbnail_id, 'project-thumb' );
-print_r($attachment);
+if(empty($attachment)){
+	$attachmentSrc = get_template_directory_uri() . '/images/estimate-grid-image.jpg';
+}else{
+	$attachmentSrc = $attachment[0];
+}
+
 ?>
   <section class="estimation-details-section">
         <div class="container">
@@ -37,7 +42,7 @@ print_r($attachment);
                 </div>
             </div>
             <div class="row details-block">
-                <div class="col-sm-6 image"><img src="<?php echo $attachment[0]; ?>" alt=""></div>
+                <div class="col-sm-6 image"><img src="<?php echo $attachmentSrc; ?>" alt=""></div>
                 <div class="col-sm-6 details">
                     <h1>Project Manager : <?php echo get_field('project_manager',$pID); ?></h1>
                     <label class="email"><span>Email : </span><a href="mailto:<?php echo get_field('project_manager_email',$pID); ?>"><?php echo get_field('project_manager_email',$pID); ?></a></label>

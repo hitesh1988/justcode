@@ -330,4 +330,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_image_size( 'project-thumb', 632, 120, true );
+add_image_size( 'project-thumb', 632, 533, true );
+if ( function_exists( 'acf_add_options_sub_page' ) ){
+	acf_add_options_sub_page(array(
+		'title'      => 'Project Settings',
+		'parent'     => 'edit.php?post_type=project',
+		'capability' => 'manage_options'
+	));
+}
