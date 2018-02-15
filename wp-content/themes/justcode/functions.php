@@ -297,6 +297,8 @@ function justcode_scripts() {
 	wp_enqueue_script( 'justcode-scrolloverflow', get_template_directory_uri() . '/js/scrolloverflow.js', array(), '20151215', true );
 	wp_enqueue_script( 'justcode-fullPage.min', get_template_directory_uri() . '/js/jquery.fullPage.min.js', array(), '20151215', true );
 	
+	wp_enqueue_script( 'justcode-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
+	
 }
 add_action( 'wp_enqueue_scripts', 'justcode_scripts' );
 
@@ -337,4 +339,48 @@ if ( function_exists( 'acf_add_options_sub_page' ) ){
 		'parent'     => 'edit.php?post_type=project',
 		'capability' => 'manage_options'
 	));
+}
+
+
+add_action( 'wp_ajax_promocode', 'promocode' );
+add_action( 'wp_ajax_nopriv_promocode', 'promocode' );
+function promocode() {
+	$response['sucess'] = false;
+	$promoCode = $_POST['promocodeval'];
+	$pid = $_POST['pid'];
+	$price = get_field('project_price',$pid);
+	$allCode = get_field('add_codes' ,'option');
+	if(!empty($allCode)){
+		foreach($allCode as $pcodes){
+			if($pcodes['code'] == $promoCode){
+				update_post_meta( $pid, 'promocode', $promoCode );
+				$response['price'] = get_price($pid);	
+				$response['sucess'] = true;	
+				break;
+			}
+		}
+	}
+	echo json_encode($response);
+	die();
+	
+}
+
+function get_price($projectID){
+	$price = get_field('project_price',$projectID);
+	$allCode = get_field('add_codes' ,'option');
+	$promocode = get_field('promocode',$projectID);
+	if(!empty($allCode)){
+		foreach($allCode as $pcodes){
+			if($pcodes['code'] == $promocode){
+				if($pcodes['discount_type'] == 'percentage'){
+					$newPrice = get_woocommerce_currency_symbol() .' '. $price * ((100- $pcodes['discount_per'] ) / 100);
+				}else{
+					$newPrice = get_woocommerce_currency_symbol() .' '.  ($price - $pcodes['discount_fixed']);
+				}
+				return $newPrice;
+			}
+		}
+	}
+	
+	return $price;
 }

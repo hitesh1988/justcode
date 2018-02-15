@@ -21,7 +21,8 @@ if(empty($attachment)){
 }else{
 	$attachmentSrc = $attachment[0];
 }
-
+$price = get_price($pID);
+$promocode = get_field('promocode',$pID);
 ?>
   <section class="estimation-details-section">
         <div class="container">
@@ -47,13 +48,13 @@ if(empty($attachment)){
                     <h1>Project Manager : <?php echo get_field('project_manager',$pID); ?></h1>
                     <label class="email"><span>Email : </span><a href="mailto:<?php echo get_field('project_manager_email',$pID); ?>"><?php echo get_field('project_manager_email',$pID); ?></a></label>
                     <label class="phone"><span>Phone : </span><a href="tel:<?php echo get_field('project_manager_phone',$pID); ?>"><?php echo get_field('project_manager_phone',$pID); ?></a></label>
-                    <label class="price"><span>Price : </span> <?php echo get_field('project_price',$pID); ?></label>
+                    <label class="price"><span>Price : </span> <span class="projectprice"><?php echo  $price; ?><span></label>
                     <div class="promocode-block">
                         <form class="">
                             <label>Promocode :</label>
                             <div class="input-box">
-                                <input type="text" class="input-text" />
-                                <input type="submit" value="submit" class="btn" />
+                                <input type="text" data-pid="<?php echo $pID; ?>" class="input-text promocodeval" value="<?php echo $promocode; ?>" />
+                                <input type="submit" value="submit" class="btn promocodebtn" />
                             </div>
                         </form>
                     </div>
