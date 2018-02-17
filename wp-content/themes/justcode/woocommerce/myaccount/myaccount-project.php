@@ -23,6 +23,11 @@ if(empty($attachment)){
 }
 $price = get_price($pID);
 $promocode = get_field('promocode',$pID);
+
+
+$steps_available = get_field('steps_available',$pID);
+/* echo '<pre>';
+print_r($steps_available); */
 ?>
   <section class="estimation-details-section">
         <div class="container">
@@ -31,12 +36,25 @@ $promocode = get_field('promocode',$pID);
 
                     <div class="checkout-wrap">
                         <ul class="checkout-bar">
-
-                            <li class="<?php if (in_array("lvl1", $progress)) echo 'active'; ?>">Communicate</li>
-                            <li class="<?php if (in_array("lvl2", $progress)) echo 'active'; ?>">HTML</li>
-                            <li class="<?php if (in_array("lvl3", $progress)) echo 'active'; ?>">Development</li>
-                            <li class="<?php if (in_array("lvl4", $progress)) echo 'active'; ?>">Testing</li>
-                            <li class="<?php if (in_array("lvl5", $progress)) echo 'active'; ?>">Luanch</li>
+							<?php /*
+									<li class="<?php if (in_array("lvl1", $progress)) echo 'active'; ?>">Communicate</li>
+									<li class="<?php if (in_array("lvl2", $progress)) echo 'active'; ?>">HTML</li>
+									<li class="<?php if (in_array("lvl3", $progress)) echo 'active'; ?>">Development</li>
+									<li class="<?php if (in_array("lvl4", $progress)) echo 'active'; ?>">Testing</li>
+									<li class="<?php if (in_array("lvl5", $progress)) echo 'active'; ?>">Luanch</li>
+							
+							
+							*/ ?>
+							<?php if(!empty($steps_available)){ ?>
+								<?php 
+									foreach($steps_available as $steava) { 
+										$cfname = 'level_complete'.$steava['value'];
+										$cfnameval = get_field($cfname,$pID);
+										
+								?>
+									<li class="<?php if($cfnameval == 1) echo 'active'; ?>"><?php echo $steava['label']; ?></li>
+								<?php } ?>
+							<?php } ?>
 
                         </ul>
                     </div>

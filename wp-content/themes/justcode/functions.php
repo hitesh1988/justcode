@@ -384,3 +384,135 @@ function get_price($projectID){
 	
 	return $price;
 }
+
+if( function_exists('acf_add_options_page') ) {
+ 
+	$option_page = acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title' 	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability' 	=> 'edit_posts',
+		'redirect' 	=> false
+	));
+ 
+}
+
+
+
+/* add_filter('acf/load_field/key=field_5a864988cb01b', 'jb_populate_project_steps');
+function jb_populate_project_steps($field) {
+	static $list = null;
+	if($list !== null) { return $list; }
+	$list = array();
+	$all_steps = get_field( 'progress_options' , 'option');
+	if(is_array($all_steps) && ! empty($all_steps) ) {
+		foreach($all_steps as $steps) {
+			$list[$steps['option_key']] = $steps['option'];
+		}
+	}
+	$field['choices'] = $list;
+	return $field;
+} */
+
+
+function my_acf_add_local_field_groups() {
+	$completeFields = array();
+	static $list = null;
+	if($list !== null) { return $list; }
+	$list = array();
+	$all_steps = get_field( 'progress_options' , 'option');
+	if(is_array($all_steps) && ! empty($all_steps) ) {
+		foreach($all_steps as $steps) {
+			$list[$steps['option_key']] = $steps['option'];
+		}
+	}
+	$fieldchoices = $list;
+	
+	$checboxField = array (
+			'key' => 'field_5a864988cb01b',
+			'label' => 'Steps Available in project',
+			'name' => 'steps_available',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => $fieldchoices,
+			'allow_custom' => 0,
+			'save_custom' => 0,
+			'default_value' => array (
+			),
+			'layout' => 'horizontal',
+			'toggle' => 0,
+			'return_format' => 'array',
+		);
+	
+	array_push($completeFields,$checboxField);
+	
+	
+	if(is_array($all_steps) && ! empty($all_steps) ) {
+		foreach($all_steps as $steps) {
+			
+			$levelField = array (
+							'key' => 'level_complete'.$steps['option_key'].'_key',
+							'label' => $steps['option'].' complete',
+							'name' => 'level_complete'.$steps['option_key'],
+							'type' => 'true_false',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => array (
+								array (
+									array (
+										'field' => 'field_5a864988cb01b',
+										'operator' => '==',
+										'value' => $steps['option_key'],
+									),
+								),
+							),
+							'wrapper' => array (
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'message' => '',
+							'default_value' => 0,
+							'ui' => 1,
+							'ui_on_text' => '',
+							'ui_off_text' => '',
+						);
+			array_push($completeFields,$levelField);
+		}
+	} 
+	
+	acf_add_local_field_group(array (
+		'key' => 'group_5a86452c014a6',
+		'title' => 'Project Status',
+		'fields' => array (
+			$completeFields
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'project',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+	
+}
+
+add_action('acf/init', 'my_acf_add_local_field_groups');
