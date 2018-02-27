@@ -295,6 +295,9 @@ function justcode_scripts() {
 	wp_enqueue_script( 'justcode-jquery.bxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', array(), '20151215', true );
 	wp_enqueue_script( 'justcode-owl.carousel', get_template_directory_uri() . '/js/owl.carousel.js', array(), '20151215', true );
 	wp_enqueue_script( 'justcode-scrolloverflow', get_template_directory_uri() . '/js/scrolloverflow.js', array(), '20151215', true );
+	
+	
+	
 	wp_enqueue_script( 'justcode-fullPage.min', get_template_directory_uri() . '/js/jquery.fullPage.min.js', array(), '20151215', true );
 	
 	wp_enqueue_script( 'justcode-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
@@ -397,24 +400,6 @@ if( function_exists('acf_add_options_page') ) {
  
 }
 
-
-
-/* add_filter('acf/load_field/key=field_5a864988cb01b', 'jb_populate_project_steps');
-function jb_populate_project_steps($field) {
-	static $list = null;
-	if($list !== null) { return $list; }
-	$list = array();
-	$all_steps = get_field( 'progress_options' , 'option');
-	if(is_array($all_steps) && ! empty($all_steps) ) {
-		foreach($all_steps as $steps) {
-			$list[$steps['option_key']] = $steps['option'];
-		}
-	}
-	$field['choices'] = $list;
-	return $field;
-} */
-
-
 function my_acf_add_local_field_groups() {
 	$completeFields = array();
 	static $list = null;
@@ -516,3 +501,103 @@ function my_acf_add_local_field_groups() {
 }
 
 add_action('acf/init', 'my_acf_add_local_field_groups');
+
+
+add_action( 'wp_ajax_saveestimation', 'saveestimation' );
+add_action( 'wp_ajax_nopriv_saveestimation', 'saveestimation' );
+function saveestimation() {
+	$response['sucess'] = false;
+	$optData= array();
+	$featureData= array();
+	$totalHoursOpt = 0;
+	$totalCostOpt = 0;
+	
+	$totalHours = 0;
+	$totalCost = 0;
+	
+	if(!empty($_POST)){
+		$email = $_POST['emailsend'];
+		$postid = $_POST['pid'];
+		$selectedopt = $_POST['selectedOpt'];
+		$features = get_field('features',$postid); 
+		$htnl = '';
+		if(!empty($features)){
+			foreach($features as $featureKey=>$feature){
+				$featureLabel = $feature['feature_label'];
+				foreach($feature['options'] as $featureopt){ 
+					
+					$optionID = 'tech_'.$postid .$featureopt['option_id'];
+					
+					if (in_array($optionID, $selectedopt)){
+						if( (!empty($featureopt['option_hours']) && ($featureopt['option_cost']) ) ){
+							$optData[$optionID]['hours'] = $featureopt['option_hours'];
+							$optData[$optionID]['cost'] = $featureopt['option_cost']; 
+							$optData[$optionID]['optlabel'] = $featureopt['option_label']; 
+							$totalHoursOpt = $totalHoursOpt + $featureopt['option_hours'];
+							$totalCostOpt = $totalCostOpt + $featureopt['option_cost'];
+							
+							$totalHours = $totalHours + $featureopt['option_hours'];
+							$totalCost = $totalCost + $featureopt['option_cost'];
+						}
+						
+					}
+				}
+				if(!empty($optData)){
+					$featureData[$featureKey]['label'] = $featureLabel;
+					$featureData[$featureKey]['optData'] = $optData;
+					$featureData[$featureKey]['optHour'] = $totalHoursOpt;
+					$featureData[$featureKey]['optCost'] = $totalCostOpt;
+					$totalHoursOpt = 0;
+					$totalCostOpt = 0;
+					$optData= array();
+				}
+				
+				
+			}
+			
+			$html .= '<table border="5"><tr>
+								<td>Feature</td>
+								<td>Items</td>
+								<td>Total Hours</td>
+								<td>Total Cost</td>
+							</tr>';
+				foreach($featureData as $costing){
+					$html .= '<tr>';
+					$html .= '<td>'.$costing['label'].'</td>';
+					$html .= '<td><table border="3">';
+					foreach($costing['optData'] as $optseldata){
+						$html .= '<tr>';
+							$html .= '<td>'.$optseldata['optlabel'].'</td>';
+							$html .= '<td>'.$optseldata['hours'].' Hours</td>';
+							$html .= '<td>$'.$optseldata['cost'].'</td>';
+						$html .= '</tr>';
+					}
+					$html .= '</table></td>';
+					
+					$html .= '<td>'.$costing['optHour'].'</td>';
+					$html .= '<td>'.$costing['optCost'].'</td>';
+					$html .= '</tr>';
+				}
+				$html .= '<tr>';
+				$html .= '<td colspan="2">Grand Total</td>';
+				$html .= '<td>'.$totalHours.'</td>';
+				$html .= '<td>'.$totalCost.'</td>';
+				$html .= '<tr>';
+			$html .= '</table>';
+		}
+		$email_to = 'justcode@yopmail.com';
+		$email_subject = 'Email subject';
+		
+		$send_mail = wp_mail($email_to, $email_subject, $html);
+		
+		
+	}
+	
+	echo json_encode($response);
+	die();
+	
+}
+function wpse27856_set_content_type(){
+    return "text/html";
+}
+add_filter( 'wp_mail_content_type','wpse27856_set_content_type' );

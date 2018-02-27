@@ -72,11 +72,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left my-nav-new">
                     <li class="hidden active"> <a href="#page-top"></a> </li>
-                    <li> <a class="page-scroll" href="index.php">Home </a> </li>
-                    <li> <a id="about-act" class="page-scroll" href="about.php">About</a> </li>
+                    <li> <a class="page-scroll" href="<?php echo site_url(); ?>">Home </a> </li>
+                    <li> <a id="about-act" class="page-scroll" href="<?php echo site_url().'/about'; ?>">About</a> </li>
                     <li class="dropdown mega-menu-half">
                         <!-- <a id="services1" class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#">Services</a> -->
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services </a> <img class="dd-arrow" src="<?php echo get_template_directory_uri() . '/'; ?>images/dd-arrow.png">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="">Services </a> <img class="dd-arrow" src="<?php echo get_template_directory_uri() . '/'; ?>images/dd-arrow.png">
                         <ul class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                             <li class="for-mar-set">
                                 <div class="mega-menu-content">
@@ -84,7 +84,7 @@
                                         <div class="col-md-12">
                                             <ul class="service-main-line service-main-line2">
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="web-development.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/web-design-development' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght hieght-dark">
                                                                 <p>web design &amp; development</p>
@@ -93,7 +93,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="mobile-application-development.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/mobile-app-development' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght2 hieght-dark">
                                                                 <p>mobile app development</p>
@@ -102,7 +102,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="software-development.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/software-development' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght3 hieght-dark">
                                                                 <p>software development</p>
@@ -111,7 +111,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="startup.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/startup' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght9 hieght-dark">
                                                                 <p>startup<br>
@@ -123,7 +123,7 @@
                                             </ul>
                                             <ul class="service-main-line service-main-line2">
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="magento-website-development.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/magento-development' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght4 hieght-dark">
                                                                 <p>magento development<br>
@@ -134,7 +134,7 @@
                                                 </li>
 
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="ecommerce-development.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/ecommerce-development' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght5 hieght-dark">
                                                                 <p>ecommerce development<br>
@@ -144,7 +144,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="managed-cloud-hosting.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/managed-cloud-hosting' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght6 hieght-dark">
                                                                 <p>Managed cloud hosting</p>
@@ -153,7 +153,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="col-sm-3 col-md-3">
-                                                    <a href="digital-marketing.php">
+                                                    <a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>">
                                                         <div class="magento-1 magento-dark">
                                                             <div class="for-hieght11 hieght-dark">
                                                                 <p>digital marketing</p>
@@ -177,7 +177,7 @@
                     <li class="for-mob-lines"><a href="ecommerce-development.php">ecommerce development</a></li>
                     <li class="for-mob-lines"><a href="managed-cloud-hosting.php">Managed cloud hosting</a></li>
                     <li class="for-mob-lines"><a href="digital-marketing.php">digital marketing</a></li>
-                    <li> <a id="contact-act" class="page-scroll" href="careers.php"><img class="hiring-text" src="<?php echo get_template_directory_uri() . '/'; ?>images/hiring.png"> Careers</a> </li>
+                    <li> <a id="contact-act" class="page-scroll" href="<?php echo site_url().'/careers'; ?>"><img class="hiring-text" src="<?php echo get_template_directory_uri() . '/'; ?>images/hiring.png"> Careers</a> </li>
                     <li> <a class="callnow" href="tel:+18002143513">Call: +1 (800) 214-3513</a> </li>
                 </ul>
                 <!--  <a href="#contact" class="page-scroll"><button type="button" class="btn btn-callnow navbar-btn start-button">Start Your Project</button></a> -->

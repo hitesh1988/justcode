@@ -1,5 +1,10 @@
+var totalHour = 0;
+var totalCost = 0;
+var selectedOpt = [];
 jQuery(document).ready(function () {
-
+	jQuery(".img-check").click(function(){
+				jQuery(this).toggleClass("check");
+			});
 	jQuery( ".promocodebtn" ).on( "click", function(event ) {
 		event.preventDefault();
 		jQuery('.container .reponsetext').remove();
@@ -39,9 +44,103 @@ jQuery(document).ready(function () {
 		
 		
 	});
-
+	
+	jQuery('.tabs .tab-links a').on('click', function(e)  {
+var currentAttrValue = jQuery(this).attr('href');
+// Show/Hide Tabs
+jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+// Change/remove current tab to active
+jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+e.preventDefault();
 });
 
+	jQuery('input.techopt').on('click',function(){
+		jQuery('.totalesti').slideUp();
+		jQuery('.sendestimation').slideUp();
+		jQuery('.totalPrice').html('');
+		jQuery('.totalHours').html('');
+	})
+
+	jQuery('.getestimation').on('click',function(){
+		selectedOpt = [];
+		var optCost = 0;
+		var optHour = 0;
+		var activeContainer = jQuery('.tab-pane.active');
+		var seleopt = activeContainer.find('input.techopt:checked');
+		if(seleopt.length > 0){
+			jQuery(seleopt).each(function(i,v){
+				var optID = jQuery(v).attr('id');
+				selectedOpt.push(optID);
+				if(estimationdata[optID].cost != ''){
+					optCost += parseInt(estimationdata[optID].cost);
+				}
+				if(estimationdata[optID].hours != ''){
+					optHour += parseInt(estimationdata[optID].hours);
+				}
+				jQuery('.sendestimation').slideDown();
+			});
+			jQuery('.totalPrice').html(optCost);
+			jQuery('.totalHours').html(optHour);
+			jQuery('.totalesti').slideDown();
+			
+			
+			
+		}else{
+			alert('Please select option first!!!');
+		}
+		 
+		
+	});	
+	
+	jQuery('.estimationemailbtn').on('click',function(){
+		var Ele,emailsend,pid,EleOldText;
+		emailsend = jQuery('.estimationemail').val();
+		pid = jQuery('.tab-pane.active').attr('data-tid');
+		Ele = jQuery(this);
+		EleOldText =  Ele.html();
+		if(emailsend != ''){ 
+		
+			Ele.attr("disabled", true);
+			Ele.html(EleOldText +' <i class="fa fa-spinner" aria-hidden="true"></i>');
+			jQuery.ajax({
+				url : ajaxUrl,
+				context : this,
+				type : 'post',
+				data : {
+					action : 'saveestimation',
+					emailsend : emailsend,
+					pid :pid,
+					selectedOpt : selectedOpt
+				},
+				success : function( response ) {
+				   /* obj = JSON.parse(response);
+					if(obj.sucess){
+						
+						jQuery('.projectprice').html(obj.price);
+					}else{
+						jQuery('.promocode-block').after('<p class="reponsetext">Invalid code</p>')
+					} */
+					Ele.attr("disabled", false);
+					Ele.html(EleOldText);
+				}
+			});	
+		}else{
+			 jQuery('.estimationemail').addClass('input-invalid');
+		}
+		
+		
+	})
+
+});
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    /* return (false) */ return (true)
+}
 jQuery(window).load(function () {
 
     equalheightnoRow(".estimation-details-section .details-block > div")
