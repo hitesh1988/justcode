@@ -1467,3 +1467,5 @@ ul.checkout-bar a {color: #150f2a;font-size: 16px;font-weight: 600;text-decorati
 
 .promocode-popup {text-align: left;padding: 0 15px;font-size: 18px;font-weight: 500;}
 .promocode-popup h2 {margin-top: 0;text-transform: capitalize;}
+
+.promocode-block .loader::before {   height: 20px;    width: 20px;    top: 61%;   left: 96%; }

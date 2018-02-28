@@ -39,3 +39,12 @@ function _jcredirect404(){
 	status_header( 404 );
 	get_template_part( 404 ); exit();
 }
+
+function applycode() {
+	if ( isset($_REQUEST) ) {
+		echo 'fefe';
+    }
+	die();
+}
+ 
+add_action( 'wp_ajax_applycode', 'applycode' );
