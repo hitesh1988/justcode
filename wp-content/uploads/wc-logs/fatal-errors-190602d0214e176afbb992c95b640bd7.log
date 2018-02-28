@@ -12,3 +12,5 @@
 
 2018-02-10T06:02:40+00:00 CRITICAL Cannot use object of type WP_Post as array
 
+2018-02-17T05:12:10+00:00 CRITICAL Call to undefined function the_advanced_excerpt()
+
