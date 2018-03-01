@@ -15,8 +15,9 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<script> var ajaxUrl = '<?php echo admin_url( 'admin-ajax.php' ); ?>' </script>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon-icon.png" />
+
 	<?php wp_head(); ?>
 </head>
 <?php /*
