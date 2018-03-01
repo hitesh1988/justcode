@@ -91,9 +91,14 @@ jQuery(document).ready(function () {
 			jQuery('.button-wrapper').append('<div class="alert-message">Please select option first!!!</div>');
 		}
 		 
+
+
+ 
 		
 	});	
 	
+	jQuery('[data-toggle="tooltip"]').tooltip(); 
+
 	jQuery('.estimationemailbtn').on('click',function(){
 		var Ele,emailsend,pid,EleOldText;
 		emailsend = jQuery('.estimationemail').val();

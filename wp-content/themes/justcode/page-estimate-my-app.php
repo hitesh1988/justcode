@@ -49,7 +49,7 @@ $parent = new WP_Query( $args );
 					?>
 					
 							<div class="row">
-								<h1><?php echo $feature['feature_label']; ?></h1>
+								<h3><?php echo $feature['feature_label']; ?></h3>
 								<?php if(!empty($feature['options'])) { ?>
 									
 									<?php	
@@ -69,7 +69,9 @@ $parent = new WP_Query( $args );
 														
 													
 													<?php } ?>
-													<label for="<?php echo $optionID ?>"><img src="<?php echo $featureopt['option_icon'] ?>" ></label>
+													<label for="<?php echo $optionID ?>">
+														<img src="<?php echo $featureopt['option_icon'] ?>" data-toggle="tooltip" data-placement="bottom" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
+													</label>
 													<?php echo $featureopt['description'] ?>
 													
 												</div>
