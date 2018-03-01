@@ -62,6 +62,7 @@ jQuery(document).ready(function () {
 	})
 
 	jQuery('.getestimation').on('click',function(){
+		jQuery('.button-wrapper .alert-message').hide();
 		selectedOpt = [];
 		var optCost = 0;
 		var optHour = 0;
@@ -86,7 +87,8 @@ jQuery(document).ready(function () {
 			
 			
 		}else{
-			alert('Please select option first!!!');
+			//alert('Please select option first!!!');
+			jQuery('.button-wrapper').append('<div class="alert-message">Please select option first!!!</div>');
 		}
 		 
 		
