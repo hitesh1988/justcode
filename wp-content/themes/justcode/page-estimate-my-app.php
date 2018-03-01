@@ -19,17 +19,18 @@ $parent = new WP_Query( $args );
 
  ?>
  
-<div class="container estimate-app">
-	<h1>Estimate my app</h1>
-	<p>Select the items below which best describe your app and the features you require.</p>
-	<small>All estimates are approximate but should give you a rough idea of what it will take to build your app.</small>	
-</div>
+
 	<?php if(!empty($parent->posts)){ ?>
 	<?php 
 		$technologies = $parent->posts;
 		$estimationdata = array();
 	?>
 	<div id="exTab1" class="container">	
+		<div class="estimate-app">
+			<h1>Estimate my app</h1>
+			<p>Select the items below which best describe your app and the features you require.</p>
+			<small>All estimates are approximate but should give you a rough idea of what it will take to build your app.</small>	
+		</div>
 		<ul  class="nav nav-pills">
 			<?php foreach($technologies as $key=>$technology){ ?>
 				<li class="<?php if($key == 0 ) echo 'active'; ?>">
@@ -97,8 +98,8 @@ $parent = new WP_Query( $args );
   
 	<div class="button-wrapper"><button class="getestimation btn-primary">Calculate</button></div>
 	<div class="totalesti" style="display:none">
-		<p><span>Total Cost : <?php echo get_woocommerce_currency_symbol(); ?></span><span class="totalPrice"></p>
-		<p><span>Total Hours :</span><span class="totalHours"></span></p>
+		<div class="total-cost"><span>Total Cost : <?php echo get_woocommerce_currency_symbol(); ?></span><span class="totalPrice"></div>
+		<div class="total-hours"><span>Total Hours :</span><span class="totalHours"></span></div>
 	</div>
 	<?php } ?>
 <div class="sendestimation" style="display:none">

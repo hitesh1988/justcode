@@ -46,13 +46,13 @@ jQuery(document).ready(function () {
 	});
 	
 	jQuery('.tabs .tab-links a').on('click', function(e)  {
-var currentAttrValue = jQuery(this).attr('href');
-// Show/Hide Tabs
-jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
-// Change/remove current tab to active
-jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-e.preventDefault();
-});
+	var currentAttrValue = jQuery(this).attr('href');
+	// Show/Hide Tabs
+	jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+	// Change/remove current tab to active
+	jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+	e.preventDefault();
+	});
 
 	jQuery('input.techopt').on('click',function(){
 		jQuery('.totalesti').slideUp();
