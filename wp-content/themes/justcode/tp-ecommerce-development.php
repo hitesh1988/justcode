@@ -532,7 +532,7 @@
     margin-top: 10px;
 }
 .drupal-header-main {
-    background-image: url(images/ecom-bg.jpg);
+    background-image: url(<?php echo get_template_directory_uri() . '/'; ?>images/ecom-bg.jpg);
 }
 .form-main-log .form-group {
     margin-bottom: 0 !important;

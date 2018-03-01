@@ -79,13 +79,7 @@
             </div>
         </div>
         <div class="row">
-			<div class="col-lg-12" name="sentMessage">
-			 <div class="row">
-                        
-				<?php echo do_shortcode('[contact-form-7 id="136" title="Contact with us"]'); ?>
-			</div></div>
-            <?php /*
-			<div class="col-lg-12">
+            <div class="col-lg-12">
                 <form id="form-third" name="sentMessage" class="contactFormClass" role="form" method="post" action="">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 form-main-log">
@@ -376,7 +370,6 @@
                     </div>
                 </form>
             </div>
-			*/ ?>
         </div>
     </div>
 </section>

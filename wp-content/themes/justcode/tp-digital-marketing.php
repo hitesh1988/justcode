@@ -403,7 +403,7 @@
                     <!-- <h5>And Let us worry about the rest! </h5> -->
                     <div class="drupal-dev-main">
                         <div class="col-md-7 animated-steps animated slideInLeft" data-class="slideInLeft" style="opacity: 1;">
-                            <img class="img-responsive" style="width: 400px; margin: 0 auto;" src="images/cms/digital-seo.gif" alt="Strategic Search Optimization">
+                            <img class="img-responsive" style="width: 400px; margin: 0 auto;" src="<?php echo get_template_directory_uri() . '/'; ?>images/cms/digital-seo.gif" alt="Strategic Search Optimization">
                         </div>
                         <div class="col-md-5 animated-steps animated slideInRight" data-class="slideInRight" style="opacity: 1;">
                             <h2 class="wordpress-heading-dev">Strategic Search Optimization</h2>
@@ -527,7 +527,7 @@
     margin-top: 10px;
 }
 .drupal-header-main {
-    background-image: url(images/cms/digital-bg.jpg);
+    background-image: url(<?php echo get_template_directory_uri() . '/'; ?>images/cms/digital-bg.jpg);
 }
 .form-main-log .form-group {
     margin-bottom: 0 !important;

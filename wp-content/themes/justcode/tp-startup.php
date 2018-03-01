@@ -491,7 +491,7 @@
     padding: 60px 0;
 }
 .drupal-header-main {
-    background-image: url(images/cms/startup-bg.jpg);
+    background-image: url(<?php echo get_template_directory_uri() . '/'; ?>images/cms/startup-bg.jpg);
 }
 .drupal-side-form.wordpress-side-form {
     background: #00b1ff;

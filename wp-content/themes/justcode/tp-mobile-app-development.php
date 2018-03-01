@@ -92,8 +92,8 @@
     <div class="container">
         <h3 class="text-center marBot">We’re Awesome And We Know It!</h3>
         <p class="lets-make text-center">Glide Through Some Of Our Mobile App Designs</p>
-        <br class="clearfix ">
-        <div class="swiper-container hvr-toptobot">
+        <br class="clearfix">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/1.png" width="212" height="378" alt="Our Work Slide 5" /></div>
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/2.png" width="212" height="378" alt="Our Work Slide 4" /></div>
@@ -101,8 +101,7 @@
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/5.png" width="212" height="378" alt="Our Work Slide 2" /></div>
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/6.png" width="212" height="378" alt="Our Work Slide 1" /></div>
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/7.png" width="212" height="378" alt="Our Work Slide 6" /></div>
-                <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/8.png" width="212" height="378" alt="Our Work Slide 7" /></div>
-                <!--<div class="swiper-slide"><img src="images/logos/9.PNG" width="212" height="378" alt="Our Work Slide 8"/></div>-->
+                <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/8.png" width="212" height="378" alt="Our Work Slide 7" /></div>                
             </div>
         </div>
 
@@ -198,7 +197,7 @@
 
 
 
-<script>
+<script type="text/javascript">
     jQuery(document).ready(function() {
         var swiper = new Swiper('.secourWork .swiper-container', {
             pagination: '.secourWork .swiper-pagination',
@@ -214,6 +213,7 @@
             loop: false,
             preventClicks: true,
             preventClicksPropagation: true,
+            direction:'horizontal',
             breakpoints: {
                 320: {
                     slidesPerView: 1,
@@ -235,4 +235,6 @@
         });
     });
 
+
 </script>
+ 

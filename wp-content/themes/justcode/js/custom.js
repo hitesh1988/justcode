@@ -141,15 +141,18 @@ function ValidateEmail(mail)
     alert("You have entered an invalid email address!")
     /* return (false) */ return (true)
 }
-jQuery(window).load(function () {
+jQuery(window).on('load', function(){
 
-    equalheightnoRow(".estimation-details-section .details-block > div")
-    
+    equalheightnoRow(".estimation-details-section .details-block > div");
+    equalheightnoRow("#exTab1 .tab-content .row .col-border");
 });
-    
+
+ 
 jQuery(window).resize(function () {
 
-    equalheightnoRow(".estimation-details-section .details-block > div")
+    equalheightnoRow(".estimation-details-section .details-block > div");
+    equalheightnoRow("#exTab1 .tab-content .row .col-border");
+    
 });
 
 
