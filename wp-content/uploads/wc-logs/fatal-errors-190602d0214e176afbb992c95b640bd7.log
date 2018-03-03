@@ -14,3 +14,5 @@
 
 2018-02-17T05:12:10+00:00 CRITICAL Call to undefined function the_advanced_excerpt()
 
+2018-03-03T04:13:39+00:00 CRITICAL Call to undefined function echoget_post_thumbnail_id()
+

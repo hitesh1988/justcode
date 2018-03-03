@@ -23,18 +23,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_account_navigation' );
 ?>
 
-<nav class="woocommerce-MyAccount-navigation">
-	<ul>
-		<li>1</li>
-		<li>1</li><li>1</li><li>1</li><li>1</li><li>1</li>
-		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
-			<?php if( ($label != 'Orders') && ($label != 'Downloads')&& ($label != 'Orders')) { ?>
-				<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
-					<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label ); ?></a>
-				</li>
-			<?php } ?>
-		<?php endforeach; ?>
-	</ul>
+<nav class="woocommerce-MyAccount-navigation navbar navbar-default">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+			    </div>
+			    <div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
+							<?php if( ($label != 'Orders') && ($label != 'Downloads')&& ($label != 'Orders')) { ?>
+								<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
+									<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label ); ?></a>
+								</li>
+							<?php } ?>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>
+
+ 
+
+
+
 
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>

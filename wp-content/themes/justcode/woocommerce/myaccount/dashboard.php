@@ -26,15 +26,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 <p><?php
 	/* translators: 1: user display name 2: logout url */
 	printf(
-		__( 'Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce' ),
-		'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
+		__( 'Hello %1$s <a href="%2$s" class="logout-btn">Log out</a>', 'woocommerce' ),
+		'<span class="welcome-text">' . esc_html( $current_user->display_name ) . '</span>',
 		esc_url( wc_logout_url( wc_get_page_permalink( 'myaccount' ) ) )
 	);
 ?></p>
 
 <p><?php
 	printf(
-		__( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a> and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' ),
+		__( '<div class="dashboard-text">From your account dashboard you can manage your <ul class="links"><li><a href="%2$s">shipping and billing addresses</a></li><li><a href="%3$s">edit your password and account details</a></li></ul></div>', 'woocommerce' ),
 		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
