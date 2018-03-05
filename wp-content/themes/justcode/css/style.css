@@ -75,7 +75,7 @@ a.active, a:active, a:focus, a:hover { color: #02bdf2; }
 .navbar-custom.affix {background-color: #222;padding: 10px 0}
 .navbar-custom.affix .navbar-brand {font-size: 1.5em}
 }
-.swiper-slide { color: #02bdf2; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight:500; }
+.swiper-slide { color: #02bdf2; font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight:500; height:auto!important; }
 .header { background-repeat: no-repeat; background-attachment: scroll; background-position: center center; background-size: cover; -o-background-size: cover; text-align: center; color: #fff }
 .header .intro-text { padding-top: 100px; padding-bottom: 50px }
 .header .intro-text .intro-lead-in { font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: italic; font-size: 22px; line-height: 22px; margin-bottom: 25px }
@@ -254,7 +254,7 @@ section#contact .section-heading { color: #fff }
 section#contact .form-group { margin-bottom: 25px }
 section#contact .form-group input, section#contact .form-group textarea { padding: 20px }
 section#contact .form-group input.form-control { height: auto }
-section#contact .form-group textarea.form-control { height: 170px }
+section#contact .form-group textarea.form-control { height:170px; resize:none; }
 section#contact .form-control:focus { border-color: #404041; -webkit-box-shadow: none; box-shadow: none }
 section#contact ::-webkit-input-placeholder {font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;text-transform: uppercase;font-weight: 700;color: #eee; font-family: 'Montserrat', sans-serif;}
 section#contact :-moz-placeholder {font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;text-transform: uppercase;font-weight: 700;color: #eee; font-family: 'Montserrat', sans-serif; }
@@ -439,7 +439,7 @@ ul.social-icon li img { padding-right: 7px }
 p.help-block.text-danger { margin: 0 }
 .form-main-log textarea { border-radius: 0; border: none; -webkit-box-shadow: none!important; box-shadow: none!important; color: #797979; font-size: 15px; font-family: 'Montserrat', sans-serif; font-weight:300; }
 .next-step { margin-top: 30px; background: transparent; border: 2px solid #fff; border-radius: 30px; color: #fff; padding: 10px 60px; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:500; font-size:18px; -webkit-transition:all ease-in .2s; transition:all ease-in .2s; margin-bottom:15px; }
-.next-step:hover { background: #fff; color:#02bdf2 }
+.next-step:hover, .next-step:focus { background: #fff; color:#02bdf2 }
 section#contact .form-main-log .form-control:focus { border-color: #cdcdcd; -webkit-box-shadow: none; box-shadow: none }
 .change::-webkit-input-placeholder {color: #797979!important;font-weight: 300!important; font-family: 'Montserrat', sans-serif!important; }
 .change:-moz-placeholder {color: #797979!important;opacity: 1;font-weight: 300!important; font-family: 'Montserrat', sans-serif!important; }
@@ -1572,40 +1572,10 @@ body.estimation-tool { background:#f5f5f5; padding-top:127px; }
 .woocommerce form .form-row label.inline { display: block; margin-top: 8px; }
 
 #contact .wpcf7-not-valid-tip { color:#fff; padding:10px 0; }
+div.wpcf7-response-output {	max-width:480px; margin:0 auto 0; padding:7px 15px; border:0; background-color:#ff0000; color:#fff; clear:both; font-weight:400; border-radius:3px; }
+div.wpcf7-mail-sent-ok { border:0; background-color:#398f14; }
+div.wpcf7-mail-sent-ng, div.wpcf7-aborted { border:0; background-color:#ff0000; }
+div.wpcf7-spam-blocked { border:0; background-color:#ffa500; color:#333; }
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border:0; color:#000; background-color:#f7e700; }
 
-
-
-div.wpcf7-response-output {
-	max-width: 480px;
-    margin: 0 auto 0;
-    text-align: center;
-	padding:7px 5px;
-	border:0;
-	background-color:#ff0000;
-	color:#fff;
-	clear:both;
-}
-
-div.wpcf7-mail-sent-ok {
-	border:0;
-	background-color:#398f14;
-}
-
-div.wpcf7-mail-sent-ng,
-div.wpcf7-aborted {
-	border:0px;
-	background-color:#ff0000;
-}
-
-div.wpcf7-spam-blocked {
-	border:0;
-	background-color:#ffa500;
-	color:#333;
-}
-
-div.wpcf7-validation-errors,
-div.wpcf7-acceptance-missing {
-	border:0;
-	color:#333;
-	background-color:#f7e700;
-}
+div.wpcf7 .ajax-loader { background-image:url(../images/spinner.gif); background-size:32px; height:32px; width:32px; margin-top:15px; margin-left:10px; }
