@@ -438,7 +438,7 @@ ul.social-icon li img { padding-right: 7px }
 .form-main-log .form-group { margin-bottom: 0!important }
 p.help-block.text-danger { margin: 0 }
 .form-main-log textarea { border-radius: 0; border: none; -webkit-box-shadow: none!important; box-shadow: none!important; color: #797979; font-size: 15px; font-family: 'Montserrat', sans-serif; font-weight:300; }
-.next-step { margin-top: 30px; background: transparent; border: 2px solid #fff; border-radius: 30px; color: #fff; padding: 10px 60px; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:500; font-size:18px; -webkit-transition:all ease-in .2s; transition:all ease-in .2s}
+.next-step { margin-top: 30px; background: transparent; border: 2px solid #fff; border-radius: 30px; color: #fff; padding: 10px 60px; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:500; font-size:18px; -webkit-transition:all ease-in .2s; transition:all ease-in .2s; margin-bottom:15px; }
 .next-step:hover { background: #fff; color:#02bdf2 }
 section#contact .form-main-log .form-control:focus { border-color: #cdcdcd; -webkit-box-shadow: none; box-shadow: none }
 .change::-webkit-input-placeholder {color: #797979!important;font-weight: 300!important; font-family: 'Montserrat', sans-serif!important; }
@@ -588,13 +588,13 @@ p.copyright { margin: 15px 0 0 }
 .mobile-box p { font-family: 'Montserrat', sans-serif; font-weight:300; font-size: 13px; margin-top: 25px }
 .mobile-box a { color: #e01256; text-decoration: none; border: 1px solid #e01256; padding: 5px 20px; display: inline-block; border-radius: 20px; font-family: 'Montserrat', sans-serif; font-weight:500; margin-top: 20px; font-size: 14px; text-transform: capitalize }
 .mobile-box-main { margin-top: 50px }
-.fusion-fullwidth2 { background: #07befa url(../images/android-fold.gif) fixed 17% 170px no-repeat; padding-top: 100px; padding-right: 30px; padding-bottom: 80px; padding-left: 30px; border-top-width: 0; border-bottom-width: 0; border-color: #eae9e9; border-top-style: solid; border-bottom-style: solid; min-height: 800px; position: relative; background-size: 15% }
+.fusion-fullwidth2 { background: #07befa url(../images/android-fold.gif) fixed 17% 170px no-repeat; padding-top: 100px; padding-right: 30px; padding-bottom: 80px; padding-left: 30px; border-top-width: 0; border-bottom-width: 0; border-color: #eae9e9; border-top-style: solid; border-bottom-style: solid; min-height: 800px; position: relative; background-size: 15%; overflow:hidden; }
 .mobile-second-main { padding-top: 130px }
 .mobile-second-main h3 { font-size: 39px; font-family: 'Montserrat', sans-serif; font-weight:700; color: #fff; line-height: 38px; border-bottom: 1px solid #50d4ff; padding-bottom: 20px; margin-bottom: 30px }
 h3.for-bottom-line { border-bottom: 1px solid #fff }
 .mobile-second-main h3 span { font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight:400;  letter-spacing: 1px }
 .mobile-second-main p { font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight:400;  color: #fff }
-.fusion-fullwidth3 { background: #c60544 url(../images/3rd-fold.gif) fixed 17% 170px no-repeat; padding-top: 100px; padding-right: 30px; padding-bottom: 80px; padding-left: 30px; border-top-width: 0; border-bottom-width: 0; border-color: #eae9e9; border-top-style: solid; border-bottom-style: solid; min-height: 800px; background-size: 15%; position: relative }
+.fusion-fullwidth3 { background: #c60544 url(../images/3rd-fold.gif) fixed 17% 170px no-repeat; padding-top: 100px; padding-right: 30px; padding-bottom: 80px; padding-left: 30px; border-top-width: 0; border-bottom-width: 0; border-color: #eae9e9; border-top-style: solid; border-bottom-style: solid; min-height: 800px; background-size: 15%; position: relative; overflow:hidden; }
 .tp-thumbs.tp-span-wrapper.outer-bottom.gyges.nav-pos-hor-center.nav-pos-ver-bottom.nav-dir-horizontal { display: none }
 #particles-js { width: 100%; height: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; position: absolute; top: 0; bottom: 0; z-index: -1 }
 .full-expert { background: #fff }
@@ -1570,3 +1570,42 @@ body.estimation-tool { background:#f5f5f5; padding-top:127px; }
 .logout-btn:hover { background-color:#02bdf2; color:#fff; text-decoration:none; }
 
 .woocommerce form .form-row label.inline { display: block; margin-top: 8px; }
+
+#contact .wpcf7-not-valid-tip { color:#fff; padding:10px 0; }
+
+
+
+div.wpcf7-response-output {
+	max-width: 480px;
+    margin: 0 auto 0;
+    text-align: center;
+	padding:7px 5px;
+	border:0;
+	background-color:#ff0000;
+	color:#fff;
+	clear:both;
+}
+
+div.wpcf7-mail-sent-ok {
+	border:0;
+	background-color:#398f14;
+}
+
+div.wpcf7-mail-sent-ng,
+div.wpcf7-aborted {
+	border:0px;
+	background-color:#ff0000;
+}
+
+div.wpcf7-spam-blocked {
+	border:0;
+	background-color:#ffa500;
+	color:#333;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+	border:0;
+	color:#333;
+	background-color:#f7e700;
+}

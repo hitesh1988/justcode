@@ -93,7 +93,7 @@
         <h3 class="text-center marBot">We’re Awesome And We Know It!</h3>
         <p class="lets-make text-center">Glide Through Some Of Our Mobile App Designs</p>
         <br class="clearfix">
-        <div class="swiper-container">
+        <div class="swiper-container hvr-toptobot">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/1.png" width="212" height="378" alt="Our Work Slide 5" /></div>
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri() . '/'; ?>images/logos/2.png" width="212" height="378" alt="Our Work Slide 4" /></div>
@@ -207,13 +207,12 @@
             centeredSlides: true,
             paginationClickable: true,
             spaceBetween: 0,
-            grabCursor: true,
+            grabCursor: false,
             initialSlide: 2,
             setWrapperSize: true,
             loop: false,
             preventClicks: true,
             preventClicksPropagation: true,
-            direction:'horizontal',
             breakpoints: {
                 320: {
                     slidesPerView: 1,
@@ -233,8 +232,14 @@
                 }
             }
         });
+
+        jQuery(".swiper-container").removeClass("swiper-container-vertical");
     });
 
 
-</script>
- 
+    jQuery(window).load (function (){
+        jQuery(".swiper-container").removeClass("swiper-container-vertical");
+    })
+
+
+</script> 
