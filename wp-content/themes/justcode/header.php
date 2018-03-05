@@ -61,7 +61,7 @@
 
 
     <!-- Navigation -->
-    <a class="popup-trigger btn get-in-touch-wrap" href="estimate-tool/indo/inded.html"><span>Get a Free Quote</span></a>
+    <a class="popup-trigger btn get-in-touch-wrap" href="<?php echo site_url(); ?>/estimate"><span>Get a Free Quote</span></a>
     <nav id="mainNav" data-spy="affix"  data-offset-top="80" class="navbar navbar-default navbar-custom navbar-fixed-top mega-menu ">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
