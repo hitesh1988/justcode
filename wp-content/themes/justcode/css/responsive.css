@@ -54,6 +54,8 @@
     
     .meetup-bar { background-size:100%!important; background-position:0 0!important; }
    /* .header { display:inline-block; width:100%; }*/
+   #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before {right:-20px;}
+   button.get-in-touch-wrap, a.get-in-touch-wrap { transform:rotate(-90deg); -webkit-transform:rotate(-90deg); }
     
     
 }
@@ -74,5 +76,42 @@
     .services-short-section h2 { font-size:23px; }
     
     ul.left-side, ul.right-side { width:100%; }    
+
+    .estimation-header .logo { padding-left:0; text-align:center; }
+    .estimate-app h1 { font-size:38px }
+    .estimate-app p { line-height:1.3; font-size:20px; }
+    #exTab1 .tab-content .tab-pane { padding:15px 20px; }
+    #exTab1 .tab-content h3 { font-size:22px; margin:20px 0 30px; }
+    #exTab1 .nav-pills li { font-size:22px; }
+    .estimate-footer { text-align:center; }
+    .estimate-footer address { padding-top:10px; margin-bottom:0; }
+    .totalesti .total-cost { font-size:32px; }
+    .totalesti .total-hours { font-size:20px; }
+    .sendestimation h2 { font-size:16px; }
+    #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before { right:50px; } 
+    #exTab1 .tab-content .row .col-border { margin-bottom:20px; }
+    .overlay .overlay-content { max-width:100%; }
+    .header .intro-text { width:88%; padding:0; }
+    .intro-text h1 { font-size:32px; }
+    .estimation-details-section .image:before { display:none; }
+
 }
  
+ @media screen and (max-width: 600px) {
+   
+   #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before { right:13%; }
+ }
+
+@media screen and (max-width:479px) {
+  
+  #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before { right:0; }
+  #exTab1 .tab-content h3 { font-size:20px; }
+  .estimate-app h1 { font-size:32px; }
+  .estimate-app p { font-size:18px; }
+  .estimate-app small { font-size:16px; }
+  #exTab1 .nav-pills li { font-size:20px; }
+}
+  @media screen and (max-width: 360px) {
+   
+   #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before { right:-10%; }
+ }

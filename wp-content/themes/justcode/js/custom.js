@@ -153,6 +153,7 @@ jQuery(window).on('load', function(){
     equalheightnoRow(".estimation-details-section .details-block > div");
     equalheightnoRow("#exTab1 .tab-content .row .col-border");
     equalheightnoRow(".woocommerce .col2-set .col-1 > form, .woocommerce .col2-set .col-2 > form");    
+    equalheight("#exTab1 .tab-content .row .col-border .title");
 });
 
  
@@ -161,6 +162,7 @@ jQuery(window).resize(function () {
     equalheightnoRow(".estimation-details-section .details-block > div");
     equalheightnoRow("#exTab1 .tab-content .row .col-border");
     equalheightnoRow(".woocommerce .col2-set .col-1 > form, .woocommerce .col2-set .col-2 > form");    
+    equalheight("#exTab1 .tab-content .row .col-border .title"); 
 });
 
 

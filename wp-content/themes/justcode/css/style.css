@@ -1438,10 +1438,10 @@ p.oops-short { font-size: 18px }
 .estimation-grid-section .grid > div { margin-bottom:70px; }
 
 .estimation-details-section { float:left; width:100%; font-family:'Roboto', sans-serif; padding:20px 0; }
-.estimation-details-section h1 { display:inline-block; width:100%; color:#25282d; font-size:32px; font-family:'Roboto', sans-serif; font-weight:700; text-transform:none; margin-bottom:10px; }
+.estimation-details-section h1 { display:inline-block; width:100%; color:#25282d; font-size:32px; font-family:'Roboto', sans-serif; font-weight:700; text-transform:none; margin-bottom:10px; margin-top:0; }
 .estimation-details-section .image { /* background:#f0eff4; */ padding-left:0; }
-.estimation-details-section .details { /* background:#f0eff4; */ padding-right:0; padding-bottom: 80px; position:relative; }
-/* .estimation-details-section .details:before { content:""; width: 0;height: 0;border-style: solid;border-width: 30.5px 37px 30.5px 0;border-color: transparent #f0eff4 transparent transparent; position:absolute; left:-37px; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%); } */
+.estimation-details-section .image:before { content:""; width:0; height:0; border-style:solid; border-width:30.5px 37px 30.5px 0; border-color:transparent #f5f5f5 transparent transparent; position:absolute; right:15px; top:50%;    -webkit-transform:translateY(-50%); transform:translateY(-50%); }
+.estimation-details-section .details { padding-right:0; padding-bottom: 80px; position:relative; }
 .estimation-details-section .details label { font-size:24px; font-weight:300; color:#9b9b9b; }
 .estimation-details-section .details label span { font-weight:400; color:#9b9b9b; text-transform:none;}
 .estimation-details-section .details label a { text-decoration:underline; color:#9b9b9b; }
@@ -1449,7 +1449,7 @@ p.oops-short { font-size: 18px }
 .estimation-details-section .details .price { margin-top:35px; }
 .estimation-details-section .details .promocode-block { position: absolute;bottom: 20px;width:calc(100% - 30px);left: 15px; }
 .estimation-details-section .details .promocode-block label { font-size:16px; font-weight:400; color:#414140; float:left; vertical-align:middle; width:100px; margin-top:8px; }
-.estimation-details-section .details .promocode-block .input-box { font-family:'Roboto', sans-serif; font-size:16px; font-weight:400; color:#414140;float:left; width:calc(100% - 100px);  }
+.estimation-details-section .details .promocode-block .input-box { font-family:'Roboto', sans-serif; font-size:16px; font-weight:400; color:#414140;float:left; width:calc(100% - 100px); position:relative; }
 .estimation-details-section .details .promocode-block .input-box .input-text { font-family:'Roboto', sans-serif; font-size:16px; font-weight:400; color:#414140; float:left; max-width:250px; width:100%; vertical-align:middle; height:39px; border:1px solid #dadada; padding:0 8px; }
 .estimation-details-section .details .promocode-block .input-box .input-text:focus { outline:0; }
 .estimation-details-section .details .promocode-block .input-box .btn { margin-left:10px; font-family:'Roboto', sans-serif; font-size:16px; font-weight:400; color:#f0eff4; float:left; max-width:147px; width:100%; border-radius:0; vertical-align:middle; background:#586f82; height:39px; border:1px solid #dadada; text-transform:uppercase; }
@@ -1579,3 +1579,8 @@ div.wpcf7-spam-blocked { border:0; background-color:#ffa500; color:#333; }
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border:0; color:#000; background-color:#f7e700; }
 
 div.wpcf7 .ajax-loader { background-image:url(../images/spinner.gif); background-size:32px; height:32px; width:32px; margin-top:15px; margin-left:10px; }
+.reponsetext { color:#f00; position:absolute; left:0; bottom:-40px; }
+.estimation-details-section .image img { width:100%; }
+.estimation-details-section .details label span.projectprice:before { content:"$"; padding-right:3px; font-weight:700; }
+
+.fancybox-navigation button { outline:0!important; }
