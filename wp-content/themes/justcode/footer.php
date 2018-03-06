@@ -457,16 +457,12 @@
                                 <li class="footer1-link-li"><a href="about.php">About</a> </li>
                                 <li class="footer1-link-li"><a href="careers.php">Careers</a> </li>
                             </ul>
-                            <div id="promocodeform">
+                            <!-- <div id="promocodeform">
                                 <form name="myForm" class="form-horizontal" id="myform" action="#" onsubmit="return submitForm();" method="POST" enctype="multipart/form-datam">
-
                                     <input type="text" value="" name="Promocode" class="promocodeinput" required placeholder="Enter Promocode">
                                     <input type="submit" class="btn btn-primary" id="mc-embedded-subscribe" value="Submit" />
-
-
                                 </form>
-
-                            </div>
+                            </div> -->
 
 
 
