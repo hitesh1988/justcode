@@ -440,15 +440,15 @@
                          <div class="span3 footer1-mobile-section mobile-container1-padded" role="navigation">
                             <div class="footer-head"> Services </div>
                             <ul class="footer1-links-list">
-                                <li class="footer1-link-li"><a href="web-development.php" title="Web Development">Web Development</a> </li>
-                                <li class="footer1-link-li"><a href="mobile-application-development.php" title="Mobile App Development">Mobile App Development</a> </li>
-                                <li class="footer1-link-li"><a href="software-development.php" title="Software Development">Software Development</a> </li>
-                                <li class="footer1-link-li"><a href="startup.php" title="Startups">Startups</a> </li>
-                                <li class="footer1-link-li"><a href="magento-website-development.php" title="Magento Development">Magento Development</a> </li>
-                                <li class="footer1-link-li"><a href="ecommerce-development.php" title="Ecommerce Development">Ecommerce Development</a> </li>
-                                <li class="footer1-link-li"><a href="managed-cloud-hosting.php" title="Managed Cloud Hosting">Managed Cloud Hosting</a> </li>
-                                <li class="footer1-link-li"><a href="digital-marketing.php" title="Digital Marketing">Digital Marketing</a> </li>
-                                <li class="footer1-link-li"><a href="" title="IT Management Services">IT Management Services</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/web-design-development' ) );  ?>" title="Web Development">Web Development</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/mobile-app-development' ) );  ?>" title="Mobile App Development">Mobile App Development</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/software-development' ) );  ?>" title="Software Development">Software Development</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/startup' ) );  ?>" title="Startups">Startups</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/magento-development' ) );  ?>" title="Magento Development">Magento Development</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/ecommerce-development' ) );  ?>" title="Ecommerce Development">Ecommerce Development</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/managed-cloud-hosting' ) );  ?>" title="Managed Cloud Hosting">Managed Cloud Hosting</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>" title="Digital Marketing">Digital Marketing</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>" title="IT Management Services">IT Management Services</a> </li>
                             </ul>
                         </div>
                         <div class="span3 footer1-mobile-section mobile-container1-padded" role="navigation">

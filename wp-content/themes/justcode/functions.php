@@ -592,7 +592,7 @@ function saveestimation() {
 		$email_subject = 'Email subject';
 		
 		$send_mail = wp_mail($email_to, $email_subject, $html);
-		
+		$response['sucess'] = true;
 		
 	}
 	

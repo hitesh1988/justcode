@@ -14,11 +14,14 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon-icon.png" />
 
 	<?php wp_head(); ?>
+	<script>
+	var ajaxUrl = '<?php echo admin_url( 'admin-ajax.php' ); ?>'
+	</script>
 </head>
 <?php /*
 <body <?php body_class(); ?>>
@@ -170,16 +173,9 @@
                         </ul>
                     </li>
                     <li style="display:none;" class=""> <a class="page-scroll" href="#hidden">hidden</a> </li>
-                    <li class="for-mob-lines"><a href="web-development.php">web design &amp; development</a></li>
-                    <li class="for-mob-lines"><a href="mobile-application-development.php">mobile app development</a></li>
-                    <li class="for-mob-lines"><a href="software-development.php">software development</a></li>
-                    <li class="for-mob-lines"><a href="startup.php">startup</a></li>
-                    <li class="for-mob-lines"><a href="magento-website-development.php">magento development</a></li>
-                    <li class="for-mob-lines"><a href="ecommerce-development.php">ecommerce development</a></li>
-                    <li class="for-mob-lines"><a href="managed-cloud-hosting.php">Managed cloud hosting</a></li>
-                    <li class="for-mob-lines"><a href="digital-marketing.php">digital marketing</a></li>
+                  <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/web-design-development' ) );  ?>">web design &amp; development</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/mobile-app-development' ) );  ?>">mobile app development</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/software-development' ) );  ?>">software development</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/startup' ) );  ?>">startup</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/magento-development' ) );  ?>">magento development</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/ecommerce-development' ) );  ?>">ecommerce development</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/managed-cloud-hosting' ) );  ?>">Managed cloud hosting</a></li>                    <li class="for-mob-lines"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>">digital marketing</a></li>
                     <li> <a id="contact-act" class="page-scroll" href="<?php echo site_url().'/careers'; ?>"><img class="hiring-text" src="<?php echo get_template_directory_uri() . '/'; ?>images/hiring.png"> Careers</a> </li>
-                    <li> <a class="callnow" href="tel:+18002143513">Call: +1 (800) 214-3513</a> </li>
+					<li> <a id="contact-act" class="page-scroll" href="<?php echo site_url().'/my-account'; ?>"> My Account</a> </li>                    <li> <a class="callnow" href="tel:+18002143513">Call: +1 (800) 214-3513</a> </li>					
                 </ul>
                 <!--  <a href="#contact" class="page-scroll"><button type="button" class="btn btn-callnow navbar-btn start-button">Start Your Project</button></a> -->
 

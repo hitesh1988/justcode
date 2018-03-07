@@ -57,7 +57,7 @@
                 <div class="col-md-7">
                     <ul class="service-main-line">
                         <li class="col-sm-3 col-md-3">
-                            <a href="web-development.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/web-design-development' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght">
                                         <p>web design &amp; development</p>
@@ -66,7 +66,7 @@
                             </a>
                         </li>
                         <li class="col-sm-3 col-md-3">
-                            <a href="mobile-application-development.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/mobile-app-development' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght2">
                                         <p>mobile app development</p>
@@ -75,7 +75,7 @@
                             </a>
                         </li>
                         <li class="col-sm-3 col-md-3">
-                            <a href="software-development.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/software-development' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght3">
                                         <p>software development</p>
@@ -84,7 +84,7 @@
                             </a>
                         </li>
                         <li class="col-sm-3 col-md-3">
-                            <a href="startup.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/startup' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght9">
                                         <p>startup<br>
@@ -96,7 +96,7 @@
                     </ul>
                     <ul class="service-main-line">
                         <li class="col-sm-3 col-md-3">
-                            <a href="magento-website-development.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/magento-development' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght4">
                                         <p>magento development<br>
@@ -106,7 +106,7 @@
                             </a>
                         </li>
                         <li class="col-sm-3 col-md-3">
-                            <a href="ecommerce-development.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/ecommerce-development' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght5">
                                         <p>ecommerce development<br>
@@ -116,7 +116,7 @@
                             </a>
                         </li>
                         <li class="col-sm-3 col-md-3">
-                            <a href="managed-cloud-hosting.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/managed-cloud-hosting' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght6">
                                         <p>Managed cloud hosting</p>
@@ -125,7 +125,7 @@
                             </a>
                         </li>
                         <li class="col-sm-3 col-md-3">
-                            <a href="digital-marketing.php">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>">
                                 <div class="magento-1">
                                     <div class="for-hieght11">
                                         <p>digital marketing</p>
