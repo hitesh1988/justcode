@@ -58,8 +58,6 @@
 */ ?>
 
 <body id="page-top" class="index">
-
-
     <!-- Navigation -->
     <a class="popup-trigger btn get-in-touch-wrap" href="<?php echo site_url(); ?>/estimate"><span>Get a Free Quote</span></a>
     <nav id="mainNav" data-spy="affix"  data-offset-top="80" class="navbar navbar-default navbar-custom navbar-fixed-top mega-menu ">
@@ -67,7 +65,9 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i> </button>
-                <a class="navbar-brand page-scroll"  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img width="170" src="<?php echo get_template_directory_uri() . '/'; ?>images/logo.png" class="img-responsive" alt="JUSTCODEINDIA"></a> </div>
+                <a class="navbar-brand page-scroll"  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <img width="240" src="<?php echo get_template_directory_uri() . '/'; ?>images/logo.png" class="img-responsive" alt="JUSTCODEINDIA"></a> 
+                </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -179,6 +179,7 @@
                     <li class="for-mob-lines"><a href="managed-cloud-hosting.php">Managed cloud hosting</a></li>
                     <li class="for-mob-lines"><a href="digital-marketing.php">digital marketing</a></li>
                     <li> <a id="contact-act" class="page-scroll" href="<?php echo site_url().'/careers'; ?>"><img class="hiring-text" src="<?php echo get_template_directory_uri() . '/'; ?>images/hiring.png"> Careers</a> </li>
+                    <li> <a id="contact-act" href="<?php echo site_url().'/careers'; ?>">Careers</a> </li>
                     <li> <a class="callnow" href="tel:+18002143513">Call: +1 (800) 214-3513</a> </li>
                 </ul>
                 <!--  <a href="#contact" class="page-scroll"><button type="button" class="btn btn-callnow navbar-btn start-button">Start Your Project</button></a> -->

@@ -402,7 +402,7 @@ ul.partners-list li { text-align: center }
 img.img-responsive.crm-indide { margin-left: -45px }
 .for-tech-logo { margin-bottom: 20px }
 .for-line-bottom.remove-bottom-line { border-bottom: none; padding-bottom: 0 }
-.second-sec-bg { background: url(../images/map.png) no-repeat 5%; background-color: #fff; background-size: 39%; position: relative }
+.second-sec-bg { background:url(../images/map.png) no-repeat 5%; background-color:#fff; background-size:39%; position:relative; min-height:700px; }
 .respond h5 { color: #4a4a4a; font-size: 53px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight:600;  word-spacing: -5px }
 .respond { padding: 70px 0 60px 0 }
 .mid-sec-text { display: inline-block; width: 100%; margin-top: 20px }
@@ -1099,7 +1099,7 @@ img.hiring-text { position: absolute; top: -3px; margin: 0 5px }
 .certified-2 h3 {font-size: 63px;line-height: 40px}
 .certified-2 h3 span {font-size: 25px}
 .respond h5 {font-size: 49px}
-ul.my-nav-new {margin-left: 0;/*width: 100%*/}
+ul.my-nav-new {margin-left: 0;/*width: 100%*/float:right!important;}
 .my-nav-new li { margin: 0 5px!important; }
 .secourWork .swiper-slide, .tabCover .swiper-slide, .SocialCover .swiper-slide {opacity: .07;text-align: center}
 }
@@ -1209,7 +1209,7 @@ a.footer1-social-tumblr { background-color: #36465d }
 .footer1-signature-w { border-top: solid 1px #3c3c42; margin-top: .9375em; padding-top: 1.75em; -webkit-transform: translate3d(0, 0, 0) }
 .footer1-legal-links { font-size: 7pt }
 .footer1-legal-links a { display: inline-block; margin-right: 1em; text-transform: uppercase }
-.footer1-wrapper { font-size: 10pt; padding:10px 0; }
+.footer1-wrapper { font-size: 10pt; padding:3.75em 0 1.75em; }
 .footer1-wrapper h5 { margin-bottom: 1.0625em }
 .footer1-wrapper .footer1-mobile-section { padding-bottom:15px; }
 .footer1-wrapper .footer1-contact.span9 { padding-top: 2px; float: right; text-align: right }
@@ -1377,13 +1377,13 @@ a { -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none }
  @media (max-width:35.4375em) {
  .ghf-wrap-outer .footer1-copyright { position: static }
 }
-.footer-head { margin-bottom: 1.0625em; font-size: 11pt; color: #555; font-family: 'Montserrat', sans-serif; font-weight:300; }
+.footer-head { margin-bottom: 1.0625em; font-size: 11pt; color: #555; font-family: 'Montserrat', sans-serif; font-weight:600; }
 .footer-about { margin-right:0; }
 h1.hover-spacing.oops-big { font-size: 300px }
 p.oops-short { font-size: 18px }
 /*14-12-17*/  
 
-.navbar-custom.affix .img-responsive { max-width: 115px; }
+.navbar-custom.affix .img-responsive { max-width:145px; }
 
 @media screen and (max-width:1190px) { 
     
@@ -1515,7 +1515,7 @@ body.estimation-tool { background:#f5f5f5; padding-top:127px; }
 .sendestimation .estimationemailbtn:hover { opacity:0.8; }
 
 .estimation-header { float:left; width:100%; position:fixed; top:0; left:0; z-index:10000; }
-.estimation-header .logo { box-shadow:0 1px 2px rgba(0,0,0,0.2); background-color:#fff; width:100%; float:left; padding-top:20px; padding-left:30px; padding-bottom:20px; }
+.estimation-header .logo { box-shadow:0 1px 2px rgba(0,0,0,0.2); background-color:#fff; width:100%; float:left; padding-top: 10px; padding-left: 30px; padding-bottom: 10px; }
 
 .estimate-footer { margin:20px 0; }
 .estimate-footer address { color:#656565; font-size:14px; font-weight:400; padding-top:20px; }
@@ -1584,3 +1584,9 @@ div.wpcf7 .ajax-loader { background-image:url(../images/spinner.gif); background
 .estimation-details-section .details label span.projectprice:before { content:"$"; padding-right:3px; font-weight:700; }
 
 .fancybox-navigation button { outline:0!important; }
+
+
+/* footer css */
+
+.footer1-wrapper .links { width:20%; float:left; padding:0 30px; }
+.footer1-wrapper .links.footer-about, .footer1-wrapper .links.footer-service { width:30%; }

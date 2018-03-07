@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <img width="140" src="<?php echo get_template_directory_uri() . '/'; ?>images/login-logo.png" class="img-responsive" alt="justcode">
+                    <img width="250" src="<?php echo get_template_directory_uri() . '/'; ?>images/login-logo.png" class="img-responsive" alt="justcode">
                 </a>
             </div>
         </div>

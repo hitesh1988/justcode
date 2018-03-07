@@ -24,6 +24,10 @@
     
     .estimation-details-section .details .promocode-block .input-box .input-text { max-width: calc(100% - 110px); }
     .estimation-details-section .details .promocode-block .input-box .btn { max-width:100px; }
+
+    button.get-in-touch-wrap, a.get-in-touch-wrap { top:80px; right:80px; }
+
+    .footer1-wrapper .links { padding:0 20px }
     
 }
 
@@ -56,7 +60,8 @@
    /* .header { display:inline-block; width:100%; }*/
    #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before {right:-20px;}
    button.get-in-touch-wrap, a.get-in-touch-wrap { transform:rotate(-90deg); -webkit-transform:rotate(-90deg); }
-    
+    .footer1-wrapper .links.footer-about, .footer1-wrapper .links.footer-service { width:50%; }
+    .footer1-wrapper .links { width:50%; margin-bottom:30px; }
     
 }
 
@@ -94,12 +99,20 @@
     .header .intro-text { width:88%; padding:0; }
     .intro-text h1 { font-size:32px; }
     .estimation-details-section .image:before { display:none; }
+    ul.my-nav-new { float:left!important; }
+    .status-publish .woocommerce-MyAccount-navigation .navbar-collapse { overflow-x:hidden; }
+    .status-publish .woocommerce-MyAccount-navigation .navbar-toggle { margin:20px 0; float:left; background-color:#414141; }
+    .status-publish .woocommerce-MyAccount-navigation .navbar-toggle .icon-bar { background-color:#fff; }
+    .status-publish .woocommerce-MyAccount-navigation li { padding:0 10px; }
+    .status-publish .entry-title { margin-top:0; }
 
 }
  
  @media screen and (max-width: 600px) {
    
    #exTab1 .tab-content .row .col-border input[type="checkbox"]:checked + label:before, #exTab1 .tab-content .row .col-border input[type="radio"]:checked + label:before { right:13%; }
+   .footer1-wrapper .links.footer-about, .footer1-wrapper .links.footer-service { width:100%; }
+    .footer1-wrapper .links { width:100%; padding:0 30px; margin-bottom:30px; } 
  }
 
 @media screen and (max-width:479px) {

@@ -433,11 +433,11 @@
             <section class="container1 full-bleed-no-max m-full-bleed footer1-wrapper phone-at-567" id="footer1-wrapper">
                 <div class="container1 full-bleed-at-567">
                     <div class="grid grid-footer1 no-grid-at-567">
-                        <div class="span3 footer1-mobile-section mobile-container1-padded  footer-about"> <img onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="<?php echo get_template_directory_uri() . '/'; ?>images/footer-logo.png" width="160px" alt="Logo">
+                        <div class="links footer-about"> <img src="<?php echo get_template_directory_uri() . '/'; ?>images/footer-logo.png" width="250" alt="Logo">
                             <p>We empower your Business through our ingenious technological solutions, and support from our remarkable teams.</p>
                         </div>
 
-                         <div class="span3 footer1-mobile-section mobile-container1-padded" role="navigation">
+                         <div class="links footer-service" role="navigation">
                             <div class="footer-head"> Services </div>
                             <ul class="footer1-links-list">
                                 <li class="footer1-link-li"><a href="web-development.php" title="Web Development">Web Development</a> </li>
@@ -451,7 +451,7 @@
                                 <li class="footer1-link-li"><a href="" title="IT Management Services">IT Management Services</a> </li>
                             </ul>
                         </div>
-                        <div class="span3 footer1-mobile-section mobile-container1-padded" role="navigation">
+                        <div class="links footer-company" role="navigation">
                             <div class="footer-head"> Company </div>
                             <ul class="footer1-links-list">
                                 <li class="footer1-link-li"><a href="about.php">About</a> </li>
@@ -511,7 +511,7 @@
                             </div>
                         </div>
 
-                        <div class="span3 footer1-mobile-section mobile-container1-padded" role="navigation">
+                        <div class="links footer-social" role="navigation">
                             <div class="footer-head"> Social </div>
                             <ul class="footer1-links-list">
                                 <div class="footer1-social-links" data-locale-code="en_US">

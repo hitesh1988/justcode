@@ -28,14 +28,14 @@ do_action( 'woocommerce_before_account_navigation' );
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="navbar-header">
-				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
 				        <span class="sr-only">Toggle navigation</span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				    </button>
 			    </div>
-			    <div class="collapse navbar-collapse">
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 					<ul class="nav navbar-nav">
 						<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 							<?php if( ($label != 'Orders') && ($label != 'Downloads')&& ($label != 'Orders')) { ?>
