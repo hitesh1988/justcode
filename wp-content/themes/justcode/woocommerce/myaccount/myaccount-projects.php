@@ -1,12 +1,6 @@
 <?php 
 $userID =  get_current_user_id();
-$post_thumbnail_id = get_post_thumbnail_id( $pID );
-$attachment = wp_get_attachment_image_src( $post_thumbnail_id, 'project-thumb' );
-if(empty($attachment)){
-	$attachmentSrc = get_template_directory_uri() . '/images/estimate-grid-image.jpg';
-}else{
-	$attachmentSrc = $attachment[0];
-}
+
 $projects = get_posts(array(
 	'numberposts'	=> -1,
 	'post_type'		=> 'project',
@@ -29,11 +23,22 @@ $projects = get_posts(array(
     </div>
 	<div class="row grid">
 	 <?php foreach($projects as $project){/*  echo '<pre>'; print_r($project); */   ?>
+		<?php 
+			$post_thumbnail_id = get_post_thumbnail_id( $project->ID );
+				$attachment = wp_get_attachment_image_src( $post_thumbnail_id, 'project-thumb' );
+				if(empty($attachment)){
+					$attachmentSrc = get_template_directory_uri() . '/images/estimate-grid-image.jpg';
+				}else{
+					$attachmentSrc = $attachment[0];
+				}
+		
+		?>
+	 
 		<div class="col-md-3 col-sm-6">
 		<a target="_blank" href="<?php echo site_url().'/my-account/project?id='.$project->ID; ?>">
 			<div class="image"><a href="<?php echo site_url().'/my-account/project?id='.$project->ID; ?>"><img src="<?php echo $attachmentSrc; ?>" alt=""></a></div>
 			<h3 class="title"><?php echo $project->post_title; ?></h3>				
-			<h3 class="quotation-id">Quotation ID :<span>10</span></h3>
+			<h3 class="quotation-id">Quotation ID :<span><?php echo $project->ID; ?></span></h3>
 		</a>
 		</div>
 	<?php } ?>	 

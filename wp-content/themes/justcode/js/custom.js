@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
 			});
 	jQuery( ".promocodebtn" ).on( "click", function(event ) {
 		event.preventDefault();
-		jQuery('.container .reponsetext').remove();
+		jQuery('.promocode-block .reponsetext').remove();
 		var Ele,promocodeval,pid;
 		promocodeval = jQuery('.promocodeval').val();
 		pid = jQuery('.promocodeval').attr('data-pid');
@@ -31,7 +31,7 @@ jQuery(document).ready(function () {
 						
 						jQuery('.projectprice').html(obj.price);
 					}else{
-						jQuery('.promocode-block').after('<p class="reponsetext">Invalid code</p>')
+						jQuery('.promocodeval').after('<p class="reponsetext">Invalid code</p>')
 					}
 					Ele.attr("disabled", false);
 					jQuery('.promocode-block form').find('.loader').remove();
@@ -108,7 +108,7 @@ jQuery(document).ready(function () {
 		if(emailsend != ''){ 
 		
 			Ele.attr("disabled", true);
-			Ele.html(EleOldText +' <i class="fa fa-spinner" aria-hidden="true"></i>');
+			Ele.html(EleOldText +' <i class="fa fa-spinner  fa-spin" aria-hidden="true"></i>');
 			jQuery.ajax({
 				url : ajaxUrl,
 				context : this,
@@ -120,13 +120,13 @@ jQuery(document).ready(function () {
 					selectedOpt : selectedOpt
 				},
 				success : function( response ) {
-				   /* obj = JSON.parse(response);
+				   obj = JSON.parse(response);
 					if(obj.sucess){
 						
-						jQuery('.projectprice').html(obj.price);
+						Ele.after('<div class="alert-message-estimation">Please check mail!!!</div>');
 					}else{
-						jQuery('.promocode-block').after('<p class="reponsetext">Invalid code</p>')
-					} */
+						jQuery('.promocode-block').after('<div class="alert-message-estimation">Action could not be completed!!</div>')
+					}
 					Ele.attr("disabled", false);
 					Ele.html(EleOldText);
 				}

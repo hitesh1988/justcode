@@ -33,12 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?></p>
 
 <p><?php
-	printf(
+	/*printf(
 		__( '<div class="dashboard-text">From your account dashboard you can manage your <ul class="links"><li><a href="%2$s">shipping and billing addresses</a></li><li><a href="%3$s">edit your password and account details</a></li></ul></div>', 'woocommerce' ),
 		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
-	);
+	);*/
 ?></p>
 
 <?php
