@@ -105,6 +105,12 @@
     .status-publish .woocommerce-MyAccount-navigation .navbar-toggle .icon-bar { background-color:#fff; }
     .status-publish .woocommerce-MyAccount-navigation li { padding:0 10px; }
     .status-publish .entry-title { margin-top:0; }
+    body.estimation-tool { padding-top:0; }
+    .estimation-header { position:relative; }
+    .estimation-header .navbar { min-height:inherit; }
+    .estimation-header .navbar-toggle { margin:0; }
+    .headerwrapper .pull-right { float:none!important; }
+    .headerwrapper .navbar-collapse { width:100%; margin-top:30px; float:left; }
 
 }
  
