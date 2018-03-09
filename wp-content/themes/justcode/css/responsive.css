@@ -62,6 +62,8 @@
    button.get-in-touch-wrap, a.get-in-touch-wrap { transform:rotate(-90deg); -webkit-transform:rotate(-90deg); }
     .footer1-wrapper .links.footer-about, .footer1-wrapper .links.footer-service { width:50%; }
     .footer1-wrapper .links { width:50%; margin-bottom:30px; }
+
+    .woocommerce .container { width:100%; padding:0 40px; }
     
 }
 

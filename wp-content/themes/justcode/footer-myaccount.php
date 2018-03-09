@@ -1,75 +1,3 @@
-<div class="main-portfolio" id="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h2 class="section-heading">Award Winning Projects</h2>                
-            </div>
-            <div class="col-md-4">
-                <ul class="new-filter">
-                    <li>
-                        <button class="filter btn active" data-filter="all">All</button>
-                    </li>
-                    <li>
-                        <button class="filter btn" data-filter=".category-1">Website</button>
-                    </li>
-                    <li>
-                        <button class="filter btn" data-filter=".category-2">Mobile app</button>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div id="Container" class="filter-gallery">
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="1" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/aumevent.png" data-fancybox="group"> <img class="img-responsive oyee" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/aumevent.png">
-				</a> </div>
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="1" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/aumdigital.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/aumdigital.png">
-				</a> </div>
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="1" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/mentallica.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/mentallica.png">
-				</a> </div>
-
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="1" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/booksy.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/booksy.png">
-				</a> </div>
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/booxchg.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/booxchg.png">
-				</a> </div>
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/easychef.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/easychef.png"></a> </div>
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/eatlocal.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/eatlocal.png"></a> </div>
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/operr.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/operr.png"></a> </div>
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/Shoponlady.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/Shoponlady.png"></a> </div>
-            <div class="mix category-2 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/stroll.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/mobile-app/stroll.png"></a> </div>
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/showinmycity.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/showinmycity.png"></a> </div>
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/bookmix.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/bookmix.png"></a> </div>
-
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/rmb-club.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/rmb-club.png"></a> </div>
-            <div class="mix category-1 col-xs-6 col-sm-4 col-md-3" data-my-order="2" style="display: inline-block;" data-bound=""> <a class="example-image-link" href="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/laki-laka.png" data-fancybox="group"> <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/portfolio-img/website/laki-laka.png"></a> </div>
-        </div>
-    </div>
-</div>
-<section class="bisiness-tech">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Technology &amp; Business <br>
-                    <span>Partners Around the World</span></h3>
-            </div>
-            <div class="clearfix"></div>
-            <div class="business-inner-main">
-                <div class="for-line-bottom">
-                    <div class="for-tech-logo">
-                        <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/Database.png">
-                    </div>
-                    <div class="for-tech-logo">
-                        <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/Digital-marketing.png">
-                    </div>
-                    <div class="for-tech-logo">
-                        <img class="img-responsive" alt="" src="<?php echo get_template_directory_uri() . '/'; ?>images/framework.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- Contact Section -->
 <footer>
     <div class="ghf-wrap-outer" data-locale="en_US" id="footer1-wrap-outer">
@@ -95,25 +23,21 @@
                                 <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>" title="IT Management Services">IT Management Services</a> </li>
                             </ul>
                         </div>
-                        <div class="links footer-company" role="navigation">
-                            <div class="footer-head"> Company </div>
-                            <ul class="footer1-links-list">
-                                <li class="footer1-link-li"><a href="about.php">About</a> </li>
-                                <li class="footer1-link-li"><a href="careers.php">Careers</a> </li>
-                            </ul>
-                            <!-- <div id="promocodeform">
+                        <!-- <div class="links footer-company" role="navigation">
+                            
+                            <div id="promocodeform">
                                 <form name="myForm" class="form-horizontal" id="myform" action="#" onsubmit="return submitForm();" method="POST" enctype="multipart/form-datam">
                                     <input type="text" value="" name="Promocode" class="promocodeinput" required placeholder="Enter Promocode">
                                     <input type="submit" class="btn btn-primary" id="mc-embedded-subscribe" value="Submit" />
                                 </form>
-                            </div> -->
-
-
-
-
+                            </div>
+                        
+                        
+                        
+                        
                             <script>
                                 function submitForm() {
-
+                        
                                     var form_data = new FormData(document.getElementById("myform"));
                                     jQuery.ajax({
                                         url: "checkpromocode.php?promocodeform=1",
@@ -134,7 +58,7 @@
                                     });
                                     return false;
                                 }
-
+                        
                             </script>
                             <div class="fancyboxYes" style="display: none;">
                                 <div class="popup promocode-popup">
@@ -153,8 +77,16 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="links">
+                            <div class="footer-head">Our office</div>
+                            <p><strong>INDIA</strong></p>
+                            <p>
+                                <strong>Justcode Software Development PVT. LTD.</strong>
+                            </p>
+                            <p>B 1103 Titanium city center near Sachin Tower Prahladnagar Ahmedabad Gujarat</p>
+                            <p><a href="tel:+91 9879 63 7979">+91 9879 63 7979</a></p>
                         </div>
-
                         <div class="links footer-social" role="navigation">
                             <div class="footer-head"> Social </div>
                             <ul class="footer1-links-list">
@@ -169,6 +101,11 @@
                                     <a class="footer1-social footer1-social-facebook" target="_blank" data-client="facebook" data-target="#facebook" data-url="#facebook" href="#" title="Facebook"><i class="old-ie-cleartype-fix-gray05 fa fa-facebook"></i><span class="visuallyhidden">Facebook</span></a>
                                     <a class="footer1-social footer1-social-twitter" target="_blank" data-client="twitter" data-target="#twitter" data-url="#twitter" href="#" title="Twitter"><i class="old-ie-cleartype-fix-gray05 fa fa-twitter"></i><span class="visuallyhidden">Twitter</span></a>
                                     <a class="footer1-social footer1-social-instagram" data-client="linkedin" target="_blank" data-target="#linkedin" data-url="#linkedin" href="#" title="linkedin"><i class="old-ie-cleartype-fix-gray05 fa fa-linkedin"></i><span class="visuallyhidden">linkedin</span></a> </div>
+                            </ul>
+                            <div class="footer-head"> Company </div>
+                            <ul class="footer1-links-list">
+                                <li class="footer1-link-li"><a href="about.php">About</a> </li>
+                                <li class="footer1-link-li"><a href="careers.php">Careers</a> </li>
                             </ul>
                         </div>
 

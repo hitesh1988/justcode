@@ -31,14 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="col2-set" id="customer_login">
 <div class="container">
 	<div class="row">
-	<div class="u-column1 col-1">
+	<div class="u-column1 col-1 block">
 
 <?php endif; ?>
 
-		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
+		
 
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
-
+			<h2><?php esc_html_e( 'Login to your account', 'woocommerce' ); ?></h2>
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -52,10 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<button type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
 				</label>
+				<button type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
 			</p>
 			<p class="woocommerce-LostPassword lost_password">
 				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
@@ -69,12 +69,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div class="u-column2 col-2 block">
 
-		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
+		
 
 		<form method="post" class="register">
-
+			<h2><?php esc_html_e( 'Create an account', 'woocommerce' ); ?></h2>
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>

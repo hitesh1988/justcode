@@ -380,20 +380,20 @@
         </div>
     </div>
 </section>
-<div class="container-fluid second-sec-bg">
+<!-- <div class="container-fluid second-sec-bg">
     <div class="container">
         <div class="row">
             <div class="respond col-xs-12 col-sm-7 col-md-7 pull-right">
                 <h5>our offices</h5>
                 <div class="mid-sec-text row">
-                    <!--<div class="col-md-4">
+                    <div class="col-md-4">
                         <h3>AMERICA</h3>
                         <p>
                             <strong>Justcode Software Development PVT. LTD.</strong>
                         </p>
                         <p>B 1103 Titanium city center near Sachin Tower Prahladnagar Ahmedabad Gujarat</p>
                         <p><a href="tel:+91 9879 63 7979">+91 9879 63 7979</a></p>
-                    </div>-->
+                    </div>
                     <div class="col-md-4">
                         <h3>INDIA</h3>
                         <p>
@@ -402,14 +402,14 @@
                         <p>B 1103 Titanium city center near Sachin Tower Prahladnagar Ahmedabad Gujarat</p>
                         <p><a href="tel:+91 9879 63 7979">+91 9879 63 7979</a></p>
                     </div>
-                    <!--<div class="col-md-4">
+                    <div class="col-md-4">
                         <h3>ABU DHABI</h3>
                         <p>
                             <strong>Justcode Software Development PVT. LTD.</strong>
                         </p>
                         <p>B 1103 Titanium city center near Sachin Tower Prahladnagar Ahmedabad Gujarat</p>
                         <p><a href="tel:+91 9879 63 7979">+91 9879 63 7979</a></p>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -424,7 +424,7 @@
     <div class="location" style="top:49.4%;left:29.4%;" id="example" rel="popover" data-content="B 1103 Titanium city center near Sachin Tower Prahladnagar Ahmedabad Gujarat" data-placement="top" data-trigger="hover" data-original-title="INDIA">
         <div class="pulse"></div>
     </div>
-</div>
+</div> -->
 
 
 <footer>
@@ -451,25 +451,21 @@
                                 <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>" title="IT Management Services">IT Management Services</a> </li>
                             </ul>
                         </div>
-                        <div class="links footer-company" role="navigation">
-                            <div class="footer-head"> Company </div>
-                            <ul class="footer1-links-list">
-                                <li class="footer1-link-li"><a href="about.php">About</a> </li>
-                                <li class="footer1-link-li"><a href="careers.php">Careers</a> </li>
-                            </ul>
-                            <!-- <div id="promocodeform">
+                        <!-- <div class="links footer-company" role="navigation">
+                            
+                            <div id="promocodeform">
                                 <form name="myForm" class="form-horizontal" id="myform" action="#" onsubmit="return submitForm();" method="POST" enctype="multipart/form-datam">
                                     <input type="text" value="" name="Promocode" class="promocodeinput" required placeholder="Enter Promocode">
                                     <input type="submit" class="btn btn-primary" id="mc-embedded-subscribe" value="Submit" />
                                 </form>
-                            </div> -->
-
-
-
-
+                            </div>
+                        
+                        
+                        
+                        
                             <script>
                                 function submitForm() {
-
+                        
                                     var form_data = new FormData(document.getElementById("myform"));
                                     jQuery.ajax({
                                         url: "checkpromocode.php?promocodeform=1",
@@ -490,7 +486,7 @@
                                     });
                                     return false;
                                 }
-
+                        
                             </script>
                             <div class="fancyboxYes" style="display: none;">
                                 <div class="popup promocode-popup">
@@ -509,8 +505,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
+                        </div> -->
+						<div class="links">
+							<div class="footer-head">Our office</div>
+							<p><strong>INDIA</strong></p>
+							<p>
+	                            <strong>Justcode Software Development PVT. LTD.</strong>
+	                        </p>
+	                        <p>B 1103 Titanium city center near Sachin Tower Prahladnagar Ahmedabad Gujarat</p>
+	                        <p><a href="tel:+91 9879 63 7979">+91 9879 63 7979</a></p>
+						</div>
                         <div class="links footer-social" role="navigation">
                             <div class="footer-head"> Social </div>
                             <ul class="footer1-links-list">
@@ -525,6 +529,11 @@
                                     <a class="footer1-social footer1-social-facebook" target="_blank" data-client="facebook" data-target="#facebook" data-url="#facebook" href="#" title="Facebook"><i class="old-ie-cleartype-fix-gray05 fa fa-facebook"></i><span class="visuallyhidden">Facebook</span></a>
                                     <a class="footer1-social footer1-social-twitter" target="_blank" data-client="twitter" data-target="#twitter" data-url="#twitter" href="#" title="Twitter"><i class="old-ie-cleartype-fix-gray05 fa fa-twitter"></i><span class="visuallyhidden">Twitter</span></a>
                                     <a class="footer1-social footer1-social-instagram" data-client="linkedin" target="_blank" data-target="#linkedin" data-url="#linkedin" href="#" title="linkedin"><i class="old-ie-cleartype-fix-gray05 fa fa-linkedin"></i><span class="visuallyhidden">linkedin</span></a> </div>
+                            </ul>
+                            <div class="footer-head"> Company </div>
+                            <ul class="footer1-links-list">
+                                <li class="footer1-link-li"><a href="about.php">About</a> </li>
+                                <li class="footer1-link-li"><a href="careers.php">Careers</a> </li>
                             </ul>
                         </div>
 
