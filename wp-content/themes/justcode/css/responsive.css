@@ -16,7 +16,7 @@
 
 @media screen and (min-width:991px) {
     
-  .footer1-wrapper .links.footer-about { padding-left:0; }
+  .footer1-wrapper .links.footer-about { padding-left:0; width:30%; }
   .footer1-wrapper .links.footer-social { padding-right:0; }
 }
 
