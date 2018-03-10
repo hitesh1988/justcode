@@ -20,64 +20,9 @@
                                 <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/ecommerce-development' ) );  ?>" title="Ecommerce Development">Ecommerce Development</a> </li>
                                 <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/managed-cloud-hosting' ) );  ?>" title="Managed Cloud Hosting">Managed Cloud Hosting</a> </li>
                                 <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>" title="Digital Marketing">Digital Marketing</a> </li>
-                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'services/digital-marketing' ) );  ?>" title="IT Management Services">IT Management Services</a> </li>
                             </ul>
                         </div>
-                        <!-- <div class="links footer-company" role="navigation">
-                            
-                            <div id="promocodeform">
-                                <form name="myForm" class="form-horizontal" id="myform" action="#" onsubmit="return submitForm();" method="POST" enctype="multipart/form-datam">
-                                    <input type="text" value="" name="Promocode" class="promocodeinput" required placeholder="Enter Promocode">
-                                    <input type="submit" class="btn btn-primary" id="mc-embedded-subscribe" value="Submit" />
-                                </form>
-                            </div>
-                        
-                        
-                        
-                        
-                            <script>
-                                function submitForm() {
-                        
-                                    var form_data = new FormData(document.getElementById("myform"));
-                                    jQuery.ajax({
-                                        url: "checkpromocode.php?promocodeform=1",
-                                        type: "POST",
-                                        data: form_data,
-                                        processData: false, // tell jQuery not to process the data
-                                        contentType: false // tell jQuery not to set contentType
-                                    }).done(function(data) {
-                                        if (data != 0 && data >= 1) {
-                                            jQuery(".fancyboxYes").attr("data-fancybox", "gallery");
-                                            document.getElementById("myform").reset();
-                                            jQuery(".fancyboxYes").trigger('click');
-                                        } else {
-                                            jQuery(".fancyboxNo").attr("data-fancybox", "gallery");
-                                            document.getElementById("myform").reset();
-                                            jQuery(".fancyboxNo").trigger('click');
-                                        }
-                                    });
-                                    return false;
-                                }
-                        
-                            </script>
-                            <div class="fancyboxYes" style="display: none;">
-                                <div class="popup promocode-popup">
-                                    <h2>Successful</h2>
-                                    <div class="content">
-                                        Thank you.
-                                        <br/> you have 37% discount on your website.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fancyboxNo" style="display: none;">
-                                <div class="popup promocode-popup">
-                                    <h2>Wrong</h2>
-                                    <div class="content">
-                                        Not match your promocode.
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                       
                         <div class="links">
                             <div class="footer-head">Our office</div>
                             <p><strong>INDIA</strong></p>

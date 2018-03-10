@@ -28,8 +28,8 @@ $parent = new WP_Query( $args );
 	<div id="exTab1" class="container">	
 		<div class="estimate-app">
 			<h1>Estimate my app</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-			<small>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</small>	
+			<p>Select the items below which best describe your app and the features you require.</p>
+			<small>All estimates are approximate but should give you a rough idea of what it will take to build your app.</small>	
 		</div>
 		<ul  class="nav nav-pills">
 			<?php foreach($technologies as $key=>$technology){ ?>
