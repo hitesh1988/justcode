@@ -98,10 +98,18 @@ $parent = new WP_Query( $args );
    
   ?>
   
-	<div class="button-wrapper"><button class="getestimation btn-primary">Calculate</button></div>
+	<div class="button-wrapper">
+		<button class="getestimation btn-primary">Calculate</button>
+	</div>
 	<div class="totalesti" style="display:none">
-		<div class="total-cost"><span>Total Cost : <?php echo get_woocommerce_currency_symbol(); ?></span><span class="totalPrice"></div>
-		<div class="total-hours"><span>Total Hours :</span><span class="totalHours"></span></div>
+		<div class="total-cost">
+			<span>Total Cost : <?php echo get_woocommerce_currency_symbol(); ?></span>
+			<span class="totalPrice">
+		</div>
+		<div class="total-hours">
+			<span>Total Hours :</span> 
+			<span class="totalHours"></span>
+		</div>
 	</div>
 	<?php } ?>
 <div class="sendestimation" style="display:none">
