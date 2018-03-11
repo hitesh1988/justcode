@@ -3,7 +3,7 @@
       <div class="main-head">
         <div class="container">
             <div class="intro-text">
-            	<img src="images/favicon-icon.png" alt="">
+            	<img src="<?php echo get_template_directory_uri() . '/'; ?>images/favicon-icon.png" alt="">
                 <h1 class="hover-spacing">JUSTCODE Story</h1>
                 
             </div>         

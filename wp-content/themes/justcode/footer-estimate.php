@@ -51,8 +51,9 @@
                             </ul>
                             <div class="footer-head"> Company </div>
                             <ul class="footer1-links-list">
-                                <li class="footer1-link-li"><a href="about.php">About</a> </li>
-                                <li class="footer1-link-li"><a href="careers.php">Careers</a> </li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'about-us' ) );  ?>">About</a></li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'careers' ) );  ?>">Careers</a></li>
+                                <li class="footer1-link-li"><a href="<?php echo get_permalink( get_page_by_path( 'my-account' ) );  ?>">My account</a></li>
                             </ul>
                         </div>
 
