@@ -3,14 +3,13 @@
       <div class="main-head">
         <div class="container">
             <div class="intro-text" style="margin-top:15% ">
-            	
-                
-                <h1>Careers At justcide</h1>
+            	<h1>Careers At justcode</h1>
                 <p style="font-size: 13pt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                <div class="for-start-btn"> <a href="#job-section" class="page-scroll">
-                         
-                          <button type="submit" class="btn next-step">See Vacancies</button>
-                          </a> </div>
+                <div class="for-start-btn"> 
+                    <a href="#job-section" class="page-scroll">
+                        <button type="submit" class="btn next-step">See Vacancies</button>
+                    </a> 
+                </div>
             </div>
         </div>
         
