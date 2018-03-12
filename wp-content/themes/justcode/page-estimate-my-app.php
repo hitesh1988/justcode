@@ -1,7 +1,6 @@
 
 <?php get_header('estimate'); ?>
 
-
 <?php
 
 $args = array(
@@ -18,6 +17,7 @@ $parent = new WP_Query( $args );
 
 
  ?>
+
  
 
 	<?php if(!empty($parent->posts)){ ?>
@@ -45,9 +45,8 @@ $parent = new WP_Query( $args );
 					<?php 
 						$features = get_field('features',$technology->ID); 
 						if(!empty($features)){
-							foreach($features as $feature){ /* echo '<pre>'; print_r($feature); */
+							foreach($features as $feature){ /*echo '<pre>'; print_r($feature);*/
 					?>
-					
 							<div class="row">
 								<h3><?php echo $feature['feature_label']; ?></h3>
 								<?php if(!empty($feature['options'])) { ?>
@@ -57,10 +56,13 @@ $parent = new WP_Query( $args );
 												$optionID = 'tech_'.$technology->ID .$featureopt['option_id'];
 												$estimationdata[$optionID]['hours'] = $featureopt['option_hours'];
 												$estimationdata[$optionID]['cost'] = $featureopt['option_cost'];
+												$estimationdata[$optionID]['description'] = $featureopt['description'];
 												
 									?>	
 												<div class="col-sm-4 col-border">
-													<span class="title"><?php echo $featureopt['option_label'] ?></span>
+													<span class="title">
+														<?php echo $featureopt['option_label'] ?>	
+													</span>
 													<?php if($feature['multi-select_options'] == '1') {?>
 														<input class="techopt" type="checkbox" name="<?php echo $optionID; ?>[]" id="<?php echo $optionID ?>" value="<?php echo $optionID ?>">
 														<?php /* <?php echo $featureopt['option_label'] ?>*/ ?>
@@ -70,20 +72,12 @@ $parent = new WP_Query( $args );
 													
 													<?php } ?>
 													<label for="<?php echo $optionID ?>">
-														<img src="<?php echo $featureopt['option_icon'] ?>" data-toggle="tooltip" data-placement="bottom" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
+														<img src="<?php echo $featureopt['option_icon'] ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo $featureopt['description'] ?>">
 													</label>
-													<?php echo $featureopt['description'] ?>
-													
 												</div>
-									<?php } ?>
-								
-								
-								
+									<?php } ?>							
 								<?php } ?>
 							</div> 
-
-
-					
 						<?php } ?>
 					<?php } ?>
 					
@@ -120,3 +114,8 @@ $parent = new WP_Query( $args );
 </div> 
 <?php get_footer('estimate'); ?>
 
+
+
+<script type="text/javascript">
+	jQuery('#exTab1 .tab-content .tab-pane .tooltip').unwrap();
+</script>
